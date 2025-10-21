@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class TestFormatOutput {
 
     @Test
-    public void testReformatcalc() {
+    public void testReformatCalc() {
         // assert
     }
 }
