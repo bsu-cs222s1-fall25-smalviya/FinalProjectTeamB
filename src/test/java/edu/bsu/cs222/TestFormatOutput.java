@@ -9,6 +9,6 @@ public class TestFormatOutput {
     public void testReformatCalc() {
         FormatOutput formatOutput = new FormatOutput();
         String result = formatOutput.formatCalculations(89.9);
-        Assertions.assertEquals("Probability og getting your item: 89.9% chance", result);
+        Assertions.assertEquals("Probability of getting your item: 89.9% chance", result);
     }
 }

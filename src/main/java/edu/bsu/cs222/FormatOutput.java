@@ -6,7 +6,7 @@ public class FormatOutput {
     CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
 
     public String formatCalculations (double probability){
-       String formattedOut = ("Probability og getting your item: " + probability +"% chance");
+       String formattedOut = ("Probability of getting your item: " + probability +"% chance");
         return formattedOut;
     }
 }
