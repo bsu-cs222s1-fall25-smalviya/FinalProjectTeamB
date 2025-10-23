@@ -5,9 +5,8 @@ public class FormatOutput {
 
     CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
 
-    public String formatTCGCalculations (double tCGCard4Probability, double tCGCard5Probability, String rarity){
-       String formattedOutTCG = ("Card 4: " + tCGCard4Probability + "% chance to be "+ rarity + ".\n"
-       + "Card 5: " + tCGCard5Probability + "% chance to be "+ rarity + "." );
-        return formattedOutTCG;
+    public String formatCalculations (double probability){
+       String formattedOut = ("Probability og getting your item: " + probability +"% chance");
+        return formattedOut;
     }
 }
