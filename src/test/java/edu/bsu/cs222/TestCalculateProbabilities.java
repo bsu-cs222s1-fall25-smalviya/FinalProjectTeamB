@@ -8,32 +8,20 @@ public class TestCalculateProbabilities {
     @Test
     public void testEnterRarityForCards4(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard4(89);
+        double result = calculateProbabilities.complementaryProbability(89, 1);
         Assertions.assertEquals(89.0, result);
     }
 
-    @Test
-    public void testEnterRarityForCards5(){
-        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard5(56);
 
-        Assertions.assertEquals(56.0, result);
-    }
+
 
     @Test
-    public void testEnterRarityForCards4WithDouble(){
+    public void testEnterRarityForCardsWithDouble(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard4(4.952);
+        double result = calculateProbabilities.complementaryProbability(4.952, 1);
         Assertions.assertEquals(4.952, result);
     }
 
-    @Test
-    public void testEnterRarityForCards5WithDouble(){
-        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard5(19.81);
-
-        Assertions.assertEquals(19.81, result);
-    }
 
 
 }

@@ -3,12 +3,12 @@ package edu.bsu.cs222;
 public class CalculateProbabilities {
 
 
+    public double complementaryProbability(double Probability, int numOfPulls) {
 
-    public double calculateTGCCard5(double card5Probability) {
-        return card5Probability;
+        return Math.pow(1 - (1- Probability), numOfPulls);
     }
 
-    public double calculateTGCCard4(double card4Probability) {
-        return card4Probability;
-    }
 }
+
+
+
