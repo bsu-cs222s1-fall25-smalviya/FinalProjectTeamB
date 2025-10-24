@@ -1,0 +1,70 @@
+[
+  {
+    "game": "Pokemon TCG Pocket",
+    "gameBanner": [
+      {
+        "bannerName": "Single Booster Pack",
+        "bannerStats": [
+          {
+            "rarity": "Uncommon",
+            "rarityProbability": 0.9516
+          },
+          {
+            "rarity": "Rare",
+            "rarityProbability": 0.2378
+          },
+          {
+            "rarity": "Ultra Rare",
+            "rarityProbability": 0.0822
+          },
+          {
+            "rarity": "Illustration Rare",
+            "rarityProbability": 0.126
+          },
+          {
+            "rarity": "Special Illustration Rare",
+            "rarityProbability": 0.0249
+          },
+          {
+            "rarity": "Immersive",
+            "rarityProbability": 0.0011
+          },
+          {
+            "rarity": "Shiny Rare",
+            "rarityProbability": 0.0355
+          },
+          {
+            "rarity": "Double Shiny Rare",
+            "rarityProbability": 0.0166
+          },
+          {
+            "rarity": "Crown Rare",
+            "rarityProbability": 0.0056
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game": "Infinity Nikki",
+    "gameBanner": [
+      {
+      "bannerName": "Surprise-O-Matic",
+      "bannerStats": [
+        {
+          "rarity": "3 Stars",
+          "rarityProbability": "0.976"
+        },
+        {
+          "rarity": "4 Stars",
+          "rarityProbability": "0.016"
+        },
+        {
+          "rarity": "5 Stars",
+          "rarityProbability": "0.008"
+        }
+      ]
+      }
+    ]
+  }
+]
