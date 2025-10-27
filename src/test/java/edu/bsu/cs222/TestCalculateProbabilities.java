@@ -8,32 +8,48 @@ public class TestCalculateProbabilities {
     @Test
     public void testEnterRarityForCards4(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard4(89);
+        double result = calculateProbabilities.complementaryProbability(89, 1);
         Assertions.assertEquals(89.0, result);
     }
 
-    @Test
-    public void testEnterRarityForCards5(){
-        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard5(56);
 
-        Assertions.assertEquals(56.0, result);
-    }
+
 
     @Test
-    public void testEnterRarityForCards4WithDouble(){
+    public void testEnterRarityForCardsWithDouble(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard4(4.952);
+        double result = calculateProbabilities.complementaryProbability(4.952, 1);
         Assertions.assertEquals(4.952, result);
     }
 
     @Test
-    public void testEnterRarityForCards5WithDouble(){
+    public void testGenshinCalculatorNoPity(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.calculateTGCCard5(19.81);
-
-        Assertions.assertEquals(19.81, result);
+        double result = calculateProbabilities.genshinProbability(0.006,  1);
+        Assertions.assertEquals(0.6, result);
     }
+
+    @Test
+    public void testGenshinCalculatorComplimenatryPity(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 74);
+        Assertions.assertEquals(6.6000000000000005, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorHardPity(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 75);
+        Assertions.assertEquals(13.8, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorGarentee(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 90);
+        Assertions.assertEquals(100, result);
+    }
+
 
 
 }

@@ -8,8 +8,7 @@ public class TestFormatOutput {
     @Test
     public void testReformatCalc() {
         FormatOutput formatOutput = new FormatOutput();
-        String result = formatOutput.formatTCGCalculations(89.0, 56.0, "Uncommon");
-        Assertions.assertEquals("Card 4: 89.0% chance to be Uncommon.\n" +
-                "Card 5: 56.0% chance to be Uncommon.", result);
+        String result = formatOutput.formatCalculations(89.9);
+        Assertions.assertEquals("Probability of getting your item: 89.9% chance", result);
     }
 }

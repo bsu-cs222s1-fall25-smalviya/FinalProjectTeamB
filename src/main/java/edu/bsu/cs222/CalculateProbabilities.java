@@ -3,12 +3,46 @@ package edu.bsu.cs222;
 public class CalculateProbabilities {
 
 
+    public double complementaryProbability(double probability, int numOfPulls) {
 
-    public double calculateTGCCard5(double card5Probability) {
-        return card5Probability;
+        return Math.pow(1 - (1- probability), numOfPulls);
     }
 
-    public double calculateTGCCard4(double card4Probability) {
-        return card4Probability;
+    public double genshinProbability (double softProbability, int numOfPulls) {
+        double finalProbability = 0;
+
+        for (int i = 0; i <= numOfPulls; i++) {
+
+            if (i == 90) {
+                finalProbability = 1;
+            } else if (i > 73) {
+               finalProbability += softProbability + .06;
+            } else finalProbability = softProbability;
+
+
+        }
+        return finalProbability*100;
     }
+
+
+
+    public double genshinProbabilityNoGarentee (double softProbability, int numOfPulls) {
+        double finalProbability = 0;
+
+        for (int i = 0; i <= numOfPulls; i++) {
+
+            if (i == 90) {
+                finalProbability = 1;
+            } else if (i > 73) {
+                finalProbability += softProbability + .06;
+            } else finalProbability = softProbability;
+
+
+        }
+        return (finalProbability*100)/2;
+    }
+
 }
+
+
+
