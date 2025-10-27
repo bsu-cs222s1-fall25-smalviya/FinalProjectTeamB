@@ -2,9 +2,7 @@
 
 ##Team Members:
 
-Ashelyn Reilly
-Cassandra Lewis
-Tatum Hadley
+Ashelyn Reilly, Cassandra Lewis, and Tatum Hadley
 
 ##Project Summary:
 
