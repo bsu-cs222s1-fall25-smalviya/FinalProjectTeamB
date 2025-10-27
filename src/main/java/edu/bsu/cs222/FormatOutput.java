@@ -1,7 +1,7 @@
 package edu.bsu.cs222;
 
 public class FormatOutput {
-    //Inupt inupt = new Input(); *Not yet a class
+    Input input = new Input();
 
     CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
 
