@@ -8,14 +8,38 @@ public class CalculateProbabilities {
         return Math.pow(1 - (1- probability), numOfPulls);
     }
 
-    public double genshinProbability (double softprobability, double hardProbability, int numOfPulls){
-        double finalProbability=0;
-        for (int i = 0; i <= numOfPulls ; i++) {
-            if (i > 75){
-                finalProbability= hardProbability;
-            } else  finalProbability =  Math.pow(1 - (1 - softprobability), numOfPulls);
+    public double genshinProbability (double softProbability, int numOfPulls) {
+        double finalProbability = 0;
+
+        for (int i = 0; i <= numOfPulls; i++) {
+
+            if (i == 90) {
+                finalProbability = 1;
+            } else if (i > 73) {
+               finalProbability += softProbability + .06;
+            } else finalProbability = softProbability;
+
+
         }
-        return finalProbability;
+        return finalProbability*100;
+    }
+
+
+
+    public double genshinProbabilityNoGarentee (double softProbability, int numOfPulls) {
+        double finalProbability = 0;
+
+        for (int i = 0; i <= numOfPulls; i++) {
+
+            if (i == 90) {
+                finalProbability = 1;
+            } else if (i > 73) {
+                finalProbability += softProbability + .06;
+            } else finalProbability = softProbability;
+
+
+        }
+        return (finalProbability*100)/2;
     }
 
 }

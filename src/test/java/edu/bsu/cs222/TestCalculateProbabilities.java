@@ -22,6 +22,34 @@ public class TestCalculateProbabilities {
         Assertions.assertEquals(4.952, result);
     }
 
+    @Test
+    public void testGenshinCalculatorNoPity(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006,  1);
+        Assertions.assertEquals(0.6, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorComplimenatryPity(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 74);
+        Assertions.assertEquals(6.6000000000000005, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorHardPity(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 75);
+        Assertions.assertEquals(13.8, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorGarentee(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 90);
+        Assertions.assertEquals(100, result);
+    }
+
 
 
 }
