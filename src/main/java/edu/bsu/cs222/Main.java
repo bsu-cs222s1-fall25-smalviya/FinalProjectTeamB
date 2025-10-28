@@ -5,7 +5,7 @@ public class Main {
         Input input = new Input();
         Output output = new Output();
         FormatOutput formatOutput = new FormatOutput();
-        RetriveDataFromDatabase retrieve = new RetriveDataFromDatabase();
+        RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
         CalculateProbabilities calculate = new CalculateProbabilities();
 
         int game = input.getUserInput();
@@ -28,6 +28,22 @@ public class Main {
 
         }
         int rarity = input.getUserRarity();
+
+        String bannerName = input.getUserBanner();
+
+        int numOfPulls = input.getUserNumOfPulls();
+
+        double singlePull = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
+        double finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
+        String formatted = formatOutput.formatCalculations(finalProbability);
+        output.print(formatted);
+
+        System.out.println("                      ");
+        System.out.println("Game: " + gameTitle);
+        System.out.println("Banner/Pack: " + bannerName);
+        System.out.println("Rarity: " + rarity);
+
+
 
     }
 }

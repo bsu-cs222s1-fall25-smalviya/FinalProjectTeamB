@@ -8,16 +8,25 @@ public class InputTest {
 @Test
     public void testGameInput() {
     Scanner tester = new Scanner("1");
-    Input game = new Input(tester);
+    Input gameInput = new Input(tester);
 
-    int gameInput = game.getUserInput();
-    assertEquals(2, gameInput);
+    int game = gameInput.getUserInput();
+    assertEquals(1, game);
 }
 @Test
     public void testRarityInput(){
     Scanner tester = new Scanner("6");
-    Input rarity = new Input(tester);
+    Input rarityInput = new Input(tester);
 
-    int rarityInput = rarity.getUserRarity();
-    assertEquals(6, rarityInput);
-}}
+    int rarity = rarityInput.getUserRarity();
+    assertEquals(6, rarity);
+}
+@Test
+    public void testBannerInput(){
+    Scanner tester = new Scanner("Starter Pack");
+    Input bannerInput = new Input(tester);
+
+    String banner = bannerInput.getUserBanner();
+    assertEquals("Starter Pack", banner);
+}
+}
