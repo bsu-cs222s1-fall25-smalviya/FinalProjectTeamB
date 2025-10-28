@@ -29,5 +29,21 @@ public class Main {
         }
         int rarity = input.getUserRarity();
 
+        String bannerName = input.getUserBanner();
+
+        int numOfPulls = input.getUserNumOfPulls();
+
+        double singlePull = retrieve.gatchaGameProbability(gameTitle, bannerName, rarity);
+        double finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
+        String formatted = formatOutput.formatCalculations(finalProbability);
+        output.print(formatted);
+
+        System.out.println("                      ");
+        System.out.println("Game: " + gameTitle);
+        System.out.println("Banner/Pack: " + bannerName);
+        System.out.println("Rarity: " + rarity);
+
+
+
     }
 }
