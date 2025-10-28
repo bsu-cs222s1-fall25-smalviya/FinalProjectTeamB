@@ -5,12 +5,11 @@ import net.minidev.json.JSONArray;
 import java.io.InputStream;
 import java.util.Map;
 // didn't end up using these two
-import com.google.gson.*;
-import java.io.*;
 
-public class RetriveDataFromDatabase {
 
-    public double gatchaGameProbability( String gameName, String bannerName,int rarity) {//works for all games(just testing for tcg tho)
+public class RetrieveDataFromDatabase {
+
+    public double gachaGameProbability(String gameName, String bannerName, int rarity) {//works for all games(just testing for tcg tho)
         double resultProbability = 0;
 
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Database.json");

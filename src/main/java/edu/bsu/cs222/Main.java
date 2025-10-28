@@ -5,7 +5,7 @@ public class Main {
         Input input = new Input();
         Output output = new Output();
         FormatOutput formatOutput = new FormatOutput();
-        RetriveDataFromDatabase retrieve = new RetriveDataFromDatabase();
+        RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
         CalculateProbabilities calculate = new CalculateProbabilities();
 
         int game = input.getUserInput();
