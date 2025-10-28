@@ -33,7 +33,7 @@ public class Main {
 
         int numOfPulls = input.getUserNumOfPulls();
 
-        double singlePull = retrieve.gatchaGameProbability(gameTitle, bannerName, rarity);
+        double singlePull = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
         double finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
         String formatted = formatOutput.formatCalculations(finalProbability);
         output.print(formatted);
