@@ -18,7 +18,8 @@ public class Input {
         return Integer.parseInt(scanner.nextLine());
     }
     public int getUserRarity() {
-        System.out.print("Please enter a number for the rarity (1-Uncommon, 2-Rare, 3-Ultra Rare, 4-Illustration Rare, 5-Special Illustration Rare, 6-Immersive, 7-Shiny rare, 8-Double Shiny Rare, 9-Crown Rare): ");
+        System.out.print("Please enter a number for the rarity (1-Uncommon, 2-Rare, 3-Ultra Rare, " +
+                "4-Illustration Rare, 5-Special Illustration Rare, 6-Immersive, 7-Shiny rare, 8-Double Shiny Rare, 9-Crown Rare): ");
         return Integer.parseInt(scanner.nextLine());
     }
     public String getUserBanner() {
