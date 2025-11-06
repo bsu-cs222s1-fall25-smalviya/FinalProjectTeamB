@@ -4,7 +4,6 @@ import com.jayway.jsonpath.JsonPath;
 import net.minidev.json.JSONArray;
 import java.io.InputStream;
 import java.util.Map;
-// didn't end up using these two
 
 
 public class RetrieveDataFromDatabase {

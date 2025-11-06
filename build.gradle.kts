@@ -1,5 +1,8 @@
+import org.gradle.kotlin.dsl.internal.sharedruntime.codegen.generateKotlinDslApiExtensionsSourceTo
+
 plugins {
     id("java")
+    `java-library`
 }
 
 group = "org.example"
@@ -19,7 +22,12 @@ dependencies {
     implementation("com.jayway.jsonpath:json-path:2.9.0")
     // https://mvnrepository.com/artifact/net.minidev/json-smart
     implementation("net.minidev:json-smart:2.6.0")
-    implementation("com.jayway.jsonpath:json-path:2.9.0")
+    // https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind
+    implementation("tools.jackson.core:jackson-databind:3.0.1")
+
+    api(group = "io.github.rossetti", name = "JSLCore", version = "R1.0.12")
+    api(group = "io.github.rossetti", name = "JSLExtensions", version = "R1.0.12")
+
 }
 
 tasks.test {
