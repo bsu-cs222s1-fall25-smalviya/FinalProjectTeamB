@@ -9,7 +9,7 @@ public class TestGachaPullSim {
     @Test
     public void TestBasicGachaPullSimFunctionality(){
         GachaPullSim pullSim = new GachaPullSim();
-        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20,10000);
+        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20);
 
         Assertions.assertNotNull(resultList);
     }
@@ -17,9 +17,9 @@ public class TestGachaPullSim {
     @Test
     public void TestGachaPullSimNoPityAveragePulls(){
         GachaPullSim pullSim = new GachaPullSim();
-        List<Integer> resultList = pullSim.userPullsSim(0.05,0,0,10000);
+        List<Integer> resultList = pullSim.userPullsSim(0.05,0,0);
 
-        double resultPulls = pullSim.averagePullsForDesiredRarity(resultList,10000);
+        double resultPulls = pullSim.averagePullsForDesiredRarity(resultList);
 
         Assertions.assertNotNull(resultPulls);
     }
@@ -27,9 +27,9 @@ public class TestGachaPullSim {
     @Test
     public void TestGachaPullSimAveragePulls(){
         GachaPullSim pullSim = new GachaPullSim();
-        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20,10000);
+        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20);
 
-        double resultPulls = pullSim.averagePullsForDesiredRarity(resultList,10000);
+        double resultPulls = pullSim.averagePullsForDesiredRarity(resultList);
 
         Assertions.assertNotNull(resultPulls);
     }
@@ -37,9 +37,9 @@ public class TestGachaPullSim {
     @Test
     public void TestGachaPullSimProbabilityPity(){
         GachaPullSim pullSim = new GachaPullSim();
-        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20,10000);
+        List<Integer> resultList = pullSim.userPullsSim(0.05,0.0606,20);
 
-        double resultProbability = pullSim.probabilityForDesiredRarity(resultList,10000);
+        double resultProbability = pullSim.probabilityForDesiredRarity(resultList);
 
         Assertions.assertNotNull(resultProbability);
     }
@@ -47,9 +47,9 @@ public class TestGachaPullSim {
     @Test
     public void TestGachaPullSimProbabilityNoPity(){
         GachaPullSim pullSim = new GachaPullSim();
-        List<Integer> resultList = pullSim.userPullsSim(0.05,0,0,10000);
+        List<Integer> resultList = pullSim.userPullsSim(0.05,0,0);
 
-        double resultProbability = pullSim.probabilityForDesiredRarity(resultList,10000);
+        double resultProbability = pullSim.probabilityForDesiredRarity(resultList);
         System.out.println(resultProbability);
 
         Assertions.assertNotNull(resultProbability);

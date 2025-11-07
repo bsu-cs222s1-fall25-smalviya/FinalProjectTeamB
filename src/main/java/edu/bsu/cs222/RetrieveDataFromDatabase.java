@@ -11,7 +11,7 @@ public class RetrieveDataFromDatabase {
     public double gachaGameProbability(String gameName, String bannerName, int rarity) {//works for all games(just testing for tcg tho)
         double resultProbability = 0;
 
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Database.json");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("DatabaseCopy.json");
         if (inputStream == null) {
             System.err.println("Could not find Database.json!");
             return 0;
@@ -34,7 +34,9 @@ public class RetrieveDataFromDatabase {
                 Map<String, Object> stat = (Map<String, Object>) jsonArray.get(i);
                 String stringRarity = (String) stat.get("rarity");
                 double doubleRarityProbability = ((Number) stat.get("rarityProbability")).doubleValue();
-                bannerStats[i] = new BannerStats(stringRarity, doubleRarityProbability);
+                double doubleRarityPityProbability = ((Number) stat.get("rarityPityProbability")).doubleValue();
+                int pityCount = ((Number) stat.get("rarityPityCount")).intValue();
+                bannerStats[i] = new BannerStats(stringRarity, doubleRarityProbability, doubleRarityPityProbability, pityCount);
             }
 
             String desiredRarity = switch (rarity) {

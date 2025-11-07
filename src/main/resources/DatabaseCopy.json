@@ -123,7 +123,7 @@
           },
           {
             "rarity": "4 Stars",
-            "rarityProbability": null,
+            "rarityProbability": 0,
             "rarityPityProbability": 0,
             "rarityPityCount": 0
           }
