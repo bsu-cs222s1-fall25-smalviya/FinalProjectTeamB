@@ -26,7 +26,7 @@ public class InputTest {
     Scanner tester = new Scanner("Starter Pack");
     Input bannerInput = new Input(tester);
 
-    String banner = bannerInput.getUserBanner();
+    String banner = bannerInput.getUserBanner("0");
     assertEquals("Starter Pack", banner);
 }
 }

@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class RetrieveDataFromDatabase {
 
-    public double gachaGameProbability(String gameName, String bannerName, int rarity) {//works for all games(just testing for tcg tho)
+    public double gachaGameProbability(String gameName, String bannerName, int rarity) {
         double resultProbability = 0;
 
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("DatabaseCopy.json");
@@ -40,15 +40,15 @@ public class RetrieveDataFromDatabase {
             }
 
             String desiredRarity = switch (rarity) {
-                case 1 -> "Uncommon";
-                case 2 -> "Rare";
-                case 3 -> "Ultra Rare";
-                case 4 -> "Illustration Rare";
-                case 5 -> "Special Illustration Rare";
-                case 6 -> "Immersive";
-                case 7 -> "Shiny Rare";
-                case 8 -> "Double Shiny Rare";
-                case 9 -> "Crown Rare";
+                case 0 -> bannerStats[0].getRarity();
+                case 1 -> bannerStats[1].getRarity();
+                case 2 -> bannerStats[2].getRarity();
+                case 3 -> bannerStats[3].getRarity();
+                case 4 -> bannerStats[4].getRarity();
+                case 5 -> bannerStats[5].getRarity();
+                case 6 -> bannerStats[6].getRarity();
+                case 7 -> bannerStats[7].getRarity();
+                case 8 -> bannerStats[8].getRarity();
                 default -> null;
             };
 

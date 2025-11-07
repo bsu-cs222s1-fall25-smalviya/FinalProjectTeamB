@@ -20,22 +20,33 @@ public class Input {
     public int getUserRarity(String gameTitle) {
         switch (gameTitle) {
             case "1":
-                System.out.print("Please enter a number for the rarity (1 - Uncommon, 2 - Rare, 3 - Ultra Rare, " +
-                        "4 - Illustration Rare, 5 - Special Illustration Rare, 6 - Immersive, 7 - Shiny rare, 8 - Double Shiny Rare, 9 - Crown Rare): ");
+                System.out.print("Please enter a number for the rarity (0 - Uncommon, 1 - Rare, 2 - Ultra Rare, " +
+                        "3 - Illustration Rare, 4 - Special Illustration Rare, 5 - Immersive, 6 - Shiny rare, 7 - Double Shiny Rare, 8 - Crown Rare): ");
                 return Integer.parseInt(scanner.nextLine());
             case "2":
-                System.out.print("Please enter the number for the rarity (1 - 3★, 2 - 4★, 3 - 5★): ");
+                System.out.print("Please enter the number for the rarity (0 - 3★, 1 - 4★, 2 - 5★): ");
                 return Integer.parseInt(scanner.nextLine());
             case "3":
-                System.out.print("Please enter the number for your desired rarity: (1 - 3★, 2 - 4★, 3 - 5★): ");
+                System.out.print("Please enter the number for your desired rarity: (0 - 3★, 1 - 4★, 2 - 5★): ");
                 return Integer.parseInt(scanner.nextLine());
         }
 
         return Integer.parseInt(scanner.nextLine());
     }
-    public String getUserBanner() {
-        System.out.print("Please enter game banner/pack: ");
-        return scanner.nextLine();
+    public String getUserBanner(String gameTitle) {
+        String rarity = null;
+        switch (gameTitle){
+            case "1":
+                System.out.print("Please enter a number for the banner (0 - Single Standard Booster Pack): ");
+                rarity = scanner.next();
+            case "2":
+                System.out.print("Please enter a number for the banner (0 - Surprise-O-Matic, 1 - 5★ Resonance, 2 - 4★ Resonance): ");
+                rarity = scanner.next();
+            case "3":
+                System.out.print("Please enter a number for the banner ()");
+                rarity = scanner.next();
+        }
+        return rarity;
     }
     public int getUserNumOfPulls(){
         System.out.print("Please enter the number of pulls: ");

@@ -29,7 +29,7 @@ public class Main {
         }
         int rarity = input.getUserRarity(gameTitle);
 
-        String bannerName = input.getUserBanner();
+        String bannerName = input.getUserBanner(gameTitle);
 
         int numOfPulls = input.getUserNumOfPulls();
 
