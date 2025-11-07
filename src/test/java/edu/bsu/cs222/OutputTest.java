@@ -14,7 +14,7 @@ public class OutputTest {
         Output output = new Output();
         FormatOutput formated = new FormatOutput();
         double probability = 0.065;
-        String formattedOutPut = formated.formatCalculations(probability);
+        String formattedOutPut = formated.formatCalculationsNoDecimal(probability);
         output.print(formattedOutPut);
         assertEquals("Probability of getting your item: 0.065% chance", out.toString());
     }

@@ -35,13 +35,14 @@ public class Main {
 
         double singlePull = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
         double finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
-        String formatted = formatOutput.formatCalculationsNoDecimal(finalProbability);
+        String formatted = formatOutput.roundedProbability(finalProbability);
         output.print(formatted);
 
         System.out.println("                      ");
         System.out.println("Game: " + gameTitle);
         System.out.println("Banner/Pack: " + bannerName);
         System.out.println("Rarity: " + rarity);
+        System.out.println("Final Probability: " + finalProbability);
 
 
 
