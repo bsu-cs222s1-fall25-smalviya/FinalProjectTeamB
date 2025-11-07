@@ -27,7 +27,7 @@ public class Main {
             }
 
         }
-        int rarity = input.getUserRarity();
+        int rarity = input.getUserRarity(gameTitle);
 
         String bannerName = input.getUserBanner();
 

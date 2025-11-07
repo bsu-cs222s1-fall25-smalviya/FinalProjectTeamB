@@ -18,7 +18,7 @@ public class InputTest {
     Scanner tester = new Scanner("6");
     Input rarityInput = new Input(tester);
 
-    int rarity = rarityInput.getUserRarity();
+    int rarity = rarityInput.getUserRarity("Pokemon TCGP");
     assertEquals(6, rarity);
 }
 @Test
