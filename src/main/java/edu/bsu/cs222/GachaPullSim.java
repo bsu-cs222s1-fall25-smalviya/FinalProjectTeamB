@@ -8,9 +8,10 @@ public class GachaPullSim {
     private Random r = new Random();
     private List<Integer> pullsList = new ArrayList<>();
     private double average;
+    private int simPulls = 10000;
 
-    public List<Integer> userPullsSim(double rarityProbability, double rarityPityProbability, int rarityPityCount, int userPulls){
-        for (int i = 1; i <= userPulls; i++) {
+    public List<Integer> userPullsSim(double rarityProbability, double rarityPityProbability, int rarityPityCount){
+        for (int i = 1; i <= simPulls; i++) {
             int pulls = 0;
             boolean targetFound = false;
             int pityCount = 0;
@@ -38,24 +39,23 @@ public class GachaPullSim {
         return pullsList;
     }
 
-    public double averagePullsForDesiredRarity(List<Integer> pullsList, int userPulls){
-        int listSize = pullsList.size();
+    public double averagePullsForDesiredRarity(List<Integer> pullsList){
         int total = 0;
 
-        for (int i = 0; i < listSize; i++) {
+        for (int i = 0; i < simPulls; i++) {
             total += pullsList.get(i);
         }
 
-        average = total/userPulls;
+        average = total/simPulls;
 
         return average;
     }
 
-    public double probabilityForDesiredRarity(List<Integer> pullsList, int userPulls){
+    public double probabilityForDesiredRarity(List<Integer> pullsList){
 
-        double average = averagePullsForDesiredRarity(pullsList, userPulls);
+        double average = averagePullsForDesiredRarity(pullsList);
 
-        return average/userPulls;
+        return average/simPulls;
     }
 
 
