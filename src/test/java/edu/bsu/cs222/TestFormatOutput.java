@@ -22,20 +22,20 @@ public class TestFormatOutput {
     @Test
     public void testReformatCalc3() {
         FormatOutput formatOutput = new FormatOutput();
-        String result = formatOutput.roundedProbability(0.0006789);
+        String result = formatOutput.roundedProbability(.000006789);
         Assertions.assertEquals("Probability of getting your item: 0.00068% chance", result);
     }
 
     @Test
     public void testReformatCalc4() {
         FormatOutput formatOutput = new FormatOutput();
-        String result = formatOutput.roundedProbability(1.0006789);
+        String result = formatOutput.roundedProbability(.010006789);
         Assertions.assertEquals("Probability of getting your item: 1.00% chance", result);
     }
     @Test
     public void testReformatCalc5() {
         FormatOutput formatOutput = new FormatOutput();
-        String result = formatOutput.roundedProbability(12.3566789);
+        String result = formatOutput.roundedProbability(.123566789);
         Assertions.assertEquals("Probability of getting your item: 12.36% chance", result);
     }
 }
