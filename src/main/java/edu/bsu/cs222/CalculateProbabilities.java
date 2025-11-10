@@ -29,7 +29,7 @@ public class CalculateProbabilities {
     }
 
 
-    public double genshinProbability50/50(double softProbability, int numOfPulls) {
+    public double genshinProbability5050(double softProbability, int numOfPulls) {
         double finalProbability = 0;
 
         double hardPity = .06;
