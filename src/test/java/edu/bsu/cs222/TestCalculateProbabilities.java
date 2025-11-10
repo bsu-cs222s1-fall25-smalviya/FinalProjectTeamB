@@ -30,17 +30,24 @@ public class TestCalculateProbabilities {
     }
 
     @Test
-    public void testGenshinCalculatorComplimenatryPity(){
+    public void testGenshinCalculatorHardPity1(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
         double result = calculateProbabilities.genshinProbability(0.006, 74);
         Assertions.assertEquals(6.6000000000000005, result);
     }
 
     @Test
-    public void testGenshinCalculatorHardPity(){
+    public void testGenshinCalculatorHardPity2(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
         double result = calculateProbabilities.genshinProbability(0.006, 75);
-        Assertions.assertEquals(13.8, result);
+        Assertions.assertEquals(12.6, result);
+    }
+
+    @Test
+    public void testGenshinCalculatorHardPity3(){
+        CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
+        double result = calculateProbabilities.genshinProbability(0.006, 80);
+        Assertions.assertEquals(42.6, result);
     }
 
     @Test
@@ -50,6 +57,6 @@ public class TestCalculateProbabilities {
         Assertions.assertEquals(100, result);
     }
 
-
+// add test classes for 50/50
 
 }
