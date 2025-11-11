@@ -43,7 +43,7 @@ public class Input {
                 System.out.print("Please enter a number for the banner (0 - Surprise-O-Matic, 1 - 5★ Resonance, 2 - 4★ Resonance): ");
                 rarity = scanner.next();
             case "3":
-                System.out.print("Please enter a number for the banner ()");
+                System.out.print("Please enter a number for the banner (0 - Limited Character, 1 - 5★, 2 - 4★ )");
                 rarity = scanner.next();
         }
         return rarity;
