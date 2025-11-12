@@ -15,6 +15,7 @@ public class Main {
             case 1 ->
                 gameTitle = "Pokemon TCGP";
 
+
             case 2 ->
                 gameTitle = "Infinity Nikki";
 
@@ -35,14 +36,28 @@ public class Main {
 
         double singlePull = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
         double finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
+
+        if (gameTitle.equals("Genshin Impact")){
+            boolean isGuaranteed = input.genshinQuestion(gameTitle);
+
+            if (isGuaranteed){
+                finalProbability = calculate.genshinProbability5050(singlePull, numOfPulls);
+            }
+            else {
+                finalProbability = calculate.genshinProbability(singlePull,numOfPulls);
+            }
+        }
+
+
         String formatted = formatOutput.roundedProbability(finalProbability);
         output.print(formatted);
 
-        System.out.println("                      ");
+        System.out.println();
         System.out.println("Game: " + gameTitle);
         System.out.println("Banner/Pack: " + bannerName);
         System.out.println("Rarity: " + rarity);
         System.out.println("Final Probability: " + finalProbability);
+
 
 
 
