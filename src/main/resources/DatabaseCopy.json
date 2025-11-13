@@ -93,7 +93,7 @@
         "bannerName": "5-Star Resonance",
         "bannerStats": [
           {
-            "rarity:": "3 Stars",
+            "rarity": "3 Stars",
             "rarityProbability": 0.8244,
             "rarityPityProbability": 0,
             "rarityPityCount": 0
