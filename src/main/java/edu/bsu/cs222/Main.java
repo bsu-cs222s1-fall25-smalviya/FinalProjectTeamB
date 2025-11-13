@@ -54,10 +54,10 @@ public class Main {
             boolean isGuaranteed = input.genshinQuestion(gameTitle);
 
             if (isGuaranteed){
-                finalProbability = calculate.genshinProbability(singlePull, numOfPulls);
+                finalProbability = calculate.genshinProbability(singlePull, rarityPityProbability, numOfPulls);
             }
             else {
-                finalProbability = calculate.genshinProbability5050(singlePull,numOfPulls);
+                finalProbability = calculate.genshinProbability5050(singlePull, rarityPityProbability, numOfPulls);
             }
         } else if (gameTitle.equals("Pokemon TCGP")){
             finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
