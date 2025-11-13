@@ -47,9 +47,9 @@ public class Input {
         String rarity = null;
         switch (gameTitle){
             case "Pokemon TCGP":
-                System.out.print("Please enter a number for the banner (0 - Single Standard Booster Pack): ");
+                System.out.print("Please enter a number for the banner (0 - Single Booster Pack): ");
                 rarity = scanner.next();
-                rarity = "Single Standard Booster Pack";
+                rarity = "Single Booster Pack";
                 break;
             case "Infinity Nikki":
                 System.out.print("Please enter a number for the banner (0 - Surprise-O-Matic, 1 - 5-Star Resonance, 2 - 4-Star Resonance): ");
