@@ -57,7 +57,7 @@ public class Main {
                 finalProbability = calculate.genshinProbability(singlePull, rarityPityProbability, numOfPulls);
             }
             else {
-                finalProbability = calculate.genshinProbability5050(singlePull, rarityPityProbability, numOfPulls);
+                finalProbability = calculate.genshinProbability5050(singlePull,rarityPityProbability, numOfPulls);
             }
         } else if (gameTitle.equals("Pokemon TCGP")){
             finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
@@ -67,10 +67,10 @@ public class Main {
 
 
 
-        /*
+
         String formatted = formatOutput.roundedProbability(finalProbability);
         output.print(formatted);
-         */
+
 
 
         System.out.println();
