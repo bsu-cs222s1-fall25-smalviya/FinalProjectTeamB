@@ -8,13 +8,13 @@ import java.util.Map;
 
 public class RetrieveDataFromDatabase {
 
-    public double gachaGameProbability(String gameName, String bannerName, int rarity) {
-        double resultProbability = 0;
+    public BannerStats gachaGameProbability(String gameName, String bannerName, int rarity) {
+        BannerStats result = null;
 
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("DatabaseCopy.json");
         if (inputStream == null) {
             System.err.println("Could not find Database.json!");
-            return 0;
+            return null;
         }
 
 
@@ -39,30 +39,33 @@ public class RetrieveDataFromDatabase {
                 bannerStats[i] = new BannerStats(stringRarity, doubleRarityProbability, doubleRarityPityProbability, pityCount);
             }
 
-            String desiredRarity = switch (rarity) {
-                case 0 -> bannerStats[0].getRarity();
-                case 1 -> bannerStats[1].getRarity();
-                case 2 -> bannerStats[2].getRarity();
-                case 3 -> bannerStats[3].getRarity();
-                case 4 -> bannerStats[4].getRarity();
-                case 5 -> bannerStats[5].getRarity();
-                case 6 -> bannerStats[6].getRarity();
-                case 7 -> bannerStats[7].getRarity();
-                case 8 -> bannerStats[8].getRarity();
-                default -> null;
-            };
-
-            for (BannerStats stat : bannerStats) {
-                if (stat.getRarity().equalsIgnoreCase(desiredRarity)) {
-                    resultProbability = stat.getRarityProbability();
-                    break;
-                }
+            switch (rarity) {
+                case 0:
+                    result = bannerStats[0];
+                case 1:
+                    result = bannerStats[1];
+                case 2:
+                    result = bannerStats[2];
+                case 3:
+                    result = bannerStats[3];
+                case 4:
+                    result = bannerStats[4];
+                case 5:
+                    result = bannerStats[5];
+                case 6:
+                    result = bannerStats[6];
+                case 7:
+                    result = bannerStats[7];
+                case 8:
+                    result = bannerStats[8];
+                default:
+                    throw new IllegalStateException("Unexpected value: " + rarity);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return resultProbability;
+        return result;
     }
 }
