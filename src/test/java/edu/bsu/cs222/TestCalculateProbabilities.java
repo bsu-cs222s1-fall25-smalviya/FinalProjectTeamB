@@ -25,35 +25,35 @@ public class TestCalculateProbabilities {
     @Test
     public void testGenshinCalculatorNoPity(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.genshinProbability(0.0006,  1);
+        double result = calculateProbabilities.genshinProbability(0.0006, 0.06,  1);
         Assertions.assertEquals(0.06, result);
     }
 
     @Test
     public void testGenshinCalculatorHardPity1(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.genshinProbability(0.0006, 74);
+        double result = calculateProbabilities.genshinProbability(0.0006, 0.06, 74);
         Assertions.assertEquals(6.0600000000000005, result);
     }
 
     @Test
     public void testGenshinCalculatorHardPity2(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.genshinProbability(0.0006, 75);
+        double result = calculateProbabilities.genshinProbability(0.0006, 0.06, 75);
         Assertions.assertEquals(12.06, result);
     }
 
     @Test
     public void testGenshinCalculatorHardPity3(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.genshinProbability(0.0006, 80);
+        double result = calculateProbabilities.genshinProbability(0.0006, 0.06, 80);
         Assertions.assertEquals(42.059999999999995, result);
     }
 
     @Test
     public void testGenshinCalculatorGarentee(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
-        double result = calculateProbabilities.genshinProbability(0.0006, 90);
+        double result = calculateProbabilities.genshinProbability(0.0006, 0.06, 90);
         Assertions.assertEquals(100, result);
     }
 

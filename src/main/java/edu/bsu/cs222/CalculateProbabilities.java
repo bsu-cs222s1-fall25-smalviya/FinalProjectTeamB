@@ -18,10 +18,10 @@ public double finalProbability;
         return finalProbability;
     }
 
-    public double genshinProbability(double softProbability, int numOfPulls) {
+    public double genshinProbability(double softProbability, double pity, int numOfPulls) {
 
 
-            double hardPity = .06;
+
 
             for (int i = 0; i <= numOfPulls; i++) {
 
@@ -29,7 +29,7 @@ public double finalProbability;
                     finalProbability = 1;
                 } else if (i > 73) {
 
-                    finalProbability = softProbability + (hardPity * (i - 73));
+                    finalProbability = softProbability + (pity * (i - 73));
 
                 } else finalProbability = softProbability;
 
@@ -40,9 +40,9 @@ public double finalProbability;
 
 
 
-    public double genshinProbability5050(double softProbability, int numOfPulls) {
-finalProbability=0;
-        double hardPity = .06;
+    public double genshinProbability5050(double softProbability, double pity, int numOfPulls) {
+
+
 
         for (int i = 0; i <= numOfPulls; i++) {
 
@@ -50,7 +50,7 @@ finalProbability=0;
                 finalProbability = 1;
             } else if (i > 73) {
 
-                finalProbability = softProbability + (hardPity * (i - 73));
+                finalProbability = softProbability + (pity * (i - 73));
 
             } else finalProbability = softProbability;
 
