@@ -7,6 +7,7 @@ public class Main {
         FormatOutput formatOutput = new FormatOutput();
         RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
         CalculateProbabilities calculate = new CalculateProbabilities();
+        How how = new How();
 
         int game = input.getUserInput();
         String gameTitle = "";
@@ -51,6 +52,10 @@ public class Main {
 
         String formatted = formatOutput.roundedProbability(finalProbability);
         output.print(formatted);
+
+        System.out.println();
+
+        how.howItsDone(gameTitle);
 
         System.out.println();
         System.out.println("Game: " + gameTitle);
