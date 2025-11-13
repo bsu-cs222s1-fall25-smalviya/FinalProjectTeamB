@@ -1,25 +1,25 @@
 package edu.bsu.cs222;
 
 public class CalculateProbabilities {
-
+public double finalProbability;
 
     public double complementaryProbability(double probability, int numOfPulls) {
 
         return Math.pow(1 - (1 - probability), numOfPulls);
     }
 
-   /* public double infinityNikiProbability(double probability, double pity, int numOfPulls){
-
-
+    public double infinityNikiProbability(double probability, double pity, double pityCount, int numOfPulls) {
+    if(numOfPulls<= pityCount){
+        finalProbability = Math.pow(1 - (1 - pity), numOfPulls);
+    } else{
+        finalProbability= Math.pow(1 - (1 - probability), numOfPulls);
+    }
 
         return finalProbability;
-   */
+    }
 
     public double genshinProbability(double softProbability, int numOfPulls) {
 
-
-
-            double finalProbability = 0;
 
             double hardPity = .06;
 
@@ -35,14 +35,13 @@ public class CalculateProbabilities {
 
 
             }
-            return finalProbability * 100;
+            return finalProbability* 100;
         }
 
 
 
     public double genshinProbability5050(double softProbability, int numOfPulls) {
-        double finalProbability = 0;
-
+finalProbability=0;
         double hardPity = .06;
 
         for (int i = 0; i <= numOfPulls; i++) {
@@ -62,8 +61,10 @@ public class CalculateProbabilities {
 
     public double genshinProbablity4StarCharacter(double softProbability, int numOfPulls){
 
-        double finalProbability = 0;
         int numOfCharacters = 0;
+        if(numOfPulls==1){
+            finalProbability=softProbability;
+        }
         if( numOfPulls %10 == 0){
            finalProbability = .5;
             if(numOfPulls %20 == 0){
@@ -77,15 +78,14 @@ public class CalculateProbabilities {
 
 
 
-return finalProbability;
+return finalProbability* 100;
     }
 
     public double genshinProbablity4Wepon(double softProbability, int numOfPulls){
 
-        double finalProbability = 0;
         int numOfCharacters = 0;
         if( numOfPulls %10 == 0){
-            finalProbability = .1;
+            finalProbability = .5;
 
         } else{
             finalProbability= Math.pow(1 - (1 - softProbability), numOfPulls);
@@ -94,7 +94,7 @@ return finalProbability;
 
 
 
-        return finalProbability;
+        return finalProbability*100;
     }
 }
 
