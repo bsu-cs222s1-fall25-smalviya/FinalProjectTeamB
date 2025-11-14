@@ -13,7 +13,7 @@ public class FormatOutput {
     }
 
     public String roundedProbability(double probability) {
-        probability=probability*100;
+
        if (probability>=1){
 
            return "Probability of getting your item: "+ String.format("%.2f",probability)+"% chance";

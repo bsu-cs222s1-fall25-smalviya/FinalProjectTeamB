@@ -5,7 +5,7 @@ public double finalProbability;
 
     public double complementaryProbability(double probability, int numOfPulls) {
 
-        return Math.pow(1 - (1 - probability), numOfPulls);
+        return Math.pow(1 - (1 - probability), numOfPulls) ;
     }
 
     public double infinityNikiProbability(double probability, double pity, double pityCount, int numOfPulls) {
@@ -15,7 +15,7 @@ public double finalProbability;
         finalProbability= Math.pow(1 - (1 - probability), numOfPulls);
     }
 
-        return finalProbability;
+        return finalProbability*100;
     }
 
     public double genshinProbability(double softProbability, double pity, int numOfPulls) {

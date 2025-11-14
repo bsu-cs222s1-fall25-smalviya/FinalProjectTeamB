@@ -22,8 +22,8 @@ public class TestFormatOutput {
     @Test
     public void testReformatCalc3() {
         FormatOutput formatOutput = new FormatOutput();
-        String result = formatOutput.roundedProbability(7.604300164111838E-4);
-        Assertions.assertEquals("Probability of getting your item: 0.00068% chance", result);
+        String result = formatOutput.roundedProbability(7.606300164111838E-4);
+        Assertions.assertEquals("Probability of getting your item: 0.076% chance", result);
     }
 
     @Test
