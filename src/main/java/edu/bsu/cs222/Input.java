@@ -34,7 +34,7 @@ public class Input {
                 break;
             }
             case "Genshin Impact" -> {
-                System.out.print("Please enter the number for your desired rarity: (0 - 3-Star, 1 - 4-Star, 2 - 5-Star): ");
+                System.out.print("Please enter the number for your desired rarity: (0 - 5 Stars, 1 - 4 Star Character, 2 - 4 Star Weapon): ");
                 rarity = Integer.parseInt(scanner.next());
                 break;
             }
@@ -64,16 +64,9 @@ public class Input {
                 }
                 break;
             case "Genshin Impact":
-                System.out.print("Please enter a number for the banner (0 - Limited Character, 1 - 5-Star, 2 - 4-Star )");
+                System.out.print("Please enter a number for the banner (0 - Limited Character)");
                 rarity = scanner.next();
-                switch (rarity){
-                    case "0" ->
-                        rarity = "Limited Character";
-                    case "1" ->
-                        rarity = "5-Star";
-                    case  "2" ->
-                        rarity = "4-Star";
-                }
+                rarity = "Limited Character";
                 break;
         }
         return rarity;
@@ -81,7 +74,7 @@ public class Input {
 
     public int getUserNumOfPulls(){
         System.out.print("Please enter the number of pulls: ");
-        return Integer.parseInt(scanner.next());
+        return Integer.parseInt(scanner.nextLine());
     }
 
     public boolean genshinQuestion(String gameTitle){
