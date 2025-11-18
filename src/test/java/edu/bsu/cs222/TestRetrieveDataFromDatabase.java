@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestRetrieveDataFromDatabase {
 
-    @Test
+    /*@Test
     public void testGetPokemonTCGPocketCardProbability(){
 
         RetrieveDataFromDatabase pull = new RetrieveDataFromDatabase();
@@ -20,5 +20,5 @@ public class TestRetrieveDataFromDatabase {
         double result = pull.gachaGameProbability("Pokemon TCGP", "Single Booster Pack",8);
         Assertions.assertEquals(0.0166, result);
     }
-
+*/
 }

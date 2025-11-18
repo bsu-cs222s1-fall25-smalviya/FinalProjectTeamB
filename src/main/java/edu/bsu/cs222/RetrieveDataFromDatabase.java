@@ -3,6 +3,7 @@ package edu.bsu.cs222;
 import com.jayway.jsonpath.JsonPath;
 import net.minidev.json.JSONArray;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Map;
 
 
@@ -38,29 +39,99 @@ public class RetrieveDataFromDatabase {
                 int pityCount = ((Number) stat.get("rarityPityCount")).intValue();
                 bannerStats[i] = new BannerStats(stringRarity, doubleRarityProbability, doubleRarityPityProbability, pityCount);
             }
+                if(bannerName == "Single Booster Pack") {
+                    switch (rarity) {
+                        case 0:
+                            result = bannerStats[0];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
+                        case 1:
+                            result = bannerStats[1];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
+                        case 2:
+                            result = bannerStats[2];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
+                        case 3:
+                            result = bannerStats[3];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[3]));
+                        case 4:
+                            result = bannerStats[4];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[4]));
+                        case 5:
+                            result = bannerStats[5];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[5]));
+                        case 6:
+                            result = bannerStats[6];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[6]));
+                        case 7:
+                            result = bannerStats[7];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[7]));
+                        case 8:
+                            result = bannerStats[8];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[8]));
 
-            switch (rarity) {
-                case 0:
-                    result = bannerStats[0];
-                case 1:
-                    result = bannerStats[1];
-                case 2:
-                    result = bannerStats[2];
-                case 3:
-                    result = bannerStats[3];
-                case 4:
-                    result = bannerStats[4];
-                case 5:
-                    result = bannerStats[5];
-                case 6:
-                    result = bannerStats[6];
-                case 7:
-                    result = bannerStats[7];
-                case 8:
-                    result = bannerStats[8];
-                default:
-                    throw new IllegalStateException("Unexpected value: " + rarity);
-            }
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + rarity);
+    }
+                } else if (bannerName == "Surprise-O-Matic") {
+                    switch (rarity) {
+                        case 0:
+                            result = bannerStats[0];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
+                        case 1:
+                            result = bannerStats[1];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
+                        case 2:
+                            result = bannerStats[2];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + rarity);
+
+                    }
+                } else if (bannerName == "5-Star Resonance") {
+                    switch (rarity) {
+                        case 0:
+                            result = bannerStats[0];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
+                        case 1:
+                            result = bannerStats[1];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
+                        case 2:
+                            result = bannerStats[2];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + rarity);
+
+                    }
+                } else if (bannerName == "4-Star Resonance") {
+                    switch (rarity) {
+                        case 0:
+                            result = bannerStats[0];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
+                        case 1:
+                            result = bannerStats[1];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
+                        case 2:
+                            result = bannerStats[2];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + rarity);
+
+                    }
+                } else if (bannerName == "Limited Character" ) {
+                    switch (rarity) {
+                        case 0:
+                            result = bannerStats[0];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
+                        case 1:
+                            result = bannerStats[1];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
+                        case 2:
+                            result = bannerStats[2];
+                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + rarity);
+                    }
+                }
 
         } catch (Exception e) {
             e.printStackTrace();

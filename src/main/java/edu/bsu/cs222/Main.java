@@ -32,9 +32,10 @@ public class Main {
             }
 
         }
-        int rarity = input.getUserRarity(gameTitle);
 
         String bannerName = input.getUserBanner(gameTitle);
+
+        int rarity = input.getUserRarity(gameTitle);
 
         int numOfPulls = input.getUserNumOfPulls();
 
@@ -49,28 +50,28 @@ public class Main {
         double averagePulls = pullSim.averagePullsForDesiredRarity(pullsList);
         double pullSimProbability = pullSim.probabilityForDesiredRarity(pullsList);
 
-
         if (gameTitle.equals("Genshin Impact")){
             boolean isGuaranteed = input.genshinQuestion(gameTitle);
 
             if (isGuaranteed){
-                finalProbability = calculate.genshinProbability5050(singlePull, numOfPulls);
+                finalProbability = calculate.genshinProbability(singlePull, rarityPityProbability, numOfPulls);
             }
             else {
-                finalProbability = calculate.genshinProbability(singlePull,numOfPulls);
+                finalProbability = calculate.genshinProbability5050(singlePull,rarityPityProbability, numOfPulls);
             }
         } else if (gameTitle.equals("Pokemon TCGP")){
             finalProbability = calculate.complementaryProbability(singlePull, numOfPulls);
         } else if (gameTitle.equals("Infinity Nikki")) {
-            finalProbability = pullSimProbability;
+            finalProbability = calculate.infinityNikiProbability(singlePull, rarityPityProbability, rarityPityCount, numOfPulls);
         }
 
 
 
-        /*
+
+
         String formatted = formatOutput.roundedProbability(finalProbability);
         output.print(formatted);
-         */
+        System.out.println();
 
 
         System.out.println();
