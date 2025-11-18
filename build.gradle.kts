@@ -3,6 +3,8 @@ import org.gradle.kotlin.dsl.internal.sharedruntime.codegen.generateKotlinDslApi
 plugins {
     id("java")
     `java-library`
+    id("application")
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "org.example"
@@ -25,11 +27,12 @@ dependencies {
     // https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind
     implementation("tools.jackson.core:jackson-databind:3.0.1")
 
-    api(group = "io.github.rossetti", name = "JSLCore", version = "R1.0.12")
-    api(group = "io.github.rossetti", name = "JSLExtensions", version = "R1.0.12")
-
 }
 
 tasks.test {
     useJUnitPlatform()
+}
+javafx {
+    version = "22-ea+16"
+    modules("javafx.controls", "javafx.fxml")
 }
