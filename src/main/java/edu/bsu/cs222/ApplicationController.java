@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 
 public class ApplicationController {
+
+    public ChoiceBox RarityChoice;
     @FXML
     private ChoiceBox<String> GachaGameChoice;
 
