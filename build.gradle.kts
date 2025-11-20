@@ -27,12 +27,20 @@ dependencies {
     // https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind
     implementation("tools.jackson.core:jackson-databind:3.0.1")
 
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-fxml
+    implementation("org.openjfx:javafx-fxml:26-ea+16")
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-base
+    implementation("org.openjfx:javafx-base:26-ea+16")
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-controls
+    implementation("org.openjfx:javafx-controls:26-ea+16")
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-graphics
+    implementation("org.openjfx:javafx-graphics:26-ea+16")
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-graphics
+    implementation("org.openjfx:javafx-graphics:26-ea+16")
+
+
 }
 
 tasks.test {
     useJUnitPlatform()
-}
-javafx {
-    version = "22-ea+16"
-    modules("javafx.controls", "javafx.fxml")
 }
