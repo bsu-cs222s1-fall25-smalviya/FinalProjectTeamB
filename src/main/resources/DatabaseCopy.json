@@ -137,12 +137,6 @@
         "bannerName": "Limited Character",
         "bannerStats": [
           {
-            "rarity": "5 Stars",
-            "rarityProbability": 0.0006,
-            "rarityPityProbability": 0.06,
-            "rarityPityCount": 0
-          },
-          {
             "rarity": "4 Star Character",
             "rarityProbability": 0.0255,
             "rarityPityProbability": 0,
@@ -152,6 +146,12 @@
             "rarity": "4 Star Weapon",
             "rarityProbability": 0.0255,
             "rarityPityProbability": 0,
+            "rarityPityCount": 0
+          },
+          {
+            "rarity": "5 Stars",
+            "rarityProbability": 0.0006,
+            "rarityPityProbability": 0.06,
             "rarityPityCount": 0
           }
         ]

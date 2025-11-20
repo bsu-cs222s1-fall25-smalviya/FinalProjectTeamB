@@ -36,7 +36,7 @@ public class Input {
                 break;
             }
             case "Genshin Impact" -> {
-                System.out.print("Please enter the number for your desired rarity: (0 - 5-Star, 1 - 4-Star Character, 2 - 4-Star Weapon): ");
+                System.out.print("Please enter the number for your desired rarity: (0 - 4-Star Character, 1 - 4-Star Weapon, 2 - 5-Star): ");
                 rarity = Integer.parseInt(scanner.next());
                 break;
             }

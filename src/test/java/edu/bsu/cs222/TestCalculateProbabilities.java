@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestCalculateProbabilities {
-
+//TCG
     @Test
     public void testEnterRarityForCards4(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
@@ -13,14 +13,14 @@ public class TestCalculateProbabilities {
     }
 
 
-
-
     @Test
     public void testEnterRarityForCardsWithDouble(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
         double result = calculateProbabilities.complementaryProbability(4.952, 1);
         Assertions.assertEquals(4.952, result);
     }
+
+    //GENSHIN PROBABILITY
 
     @Test
     public void testGenshinCalculatorNoPity(){
@@ -57,6 +57,7 @@ public class TestCalculateProbabilities {
         Assertions.assertEquals(100, result);
     }
 
+    //GENSHIN PROBABLITY 4 STAR CHARACTER
     @Test
     public void testGenshinCalculator4StarCharacter(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
@@ -98,6 +99,9 @@ public class TestCalculateProbabilities {
         double result = calculateProbabilities.genshinProbablity4StarCharacter(0.0255,25);
         Assertions.assertEquals(1.4571508395141893E-38, result);
     }
+
+
+    //GENSIN PROBABLITY 4 START WEAPON
     @Test
     public void testGenshinCalculator4Starweapon(){
         CalculateProbabilities calculateProbabilities = new CalculateProbabilities();
@@ -139,5 +143,7 @@ public class TestCalculateProbabilities {
         double result = calculateProbabilities.genshinProbablity4Wepon(0.0255,25);
         Assertions.assertEquals(1.4571508395141893E-38, result);
     }
+
+    //INIFITY NIKI
 
 }
