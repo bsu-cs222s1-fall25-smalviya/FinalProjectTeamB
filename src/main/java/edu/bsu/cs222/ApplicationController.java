@@ -90,7 +90,7 @@ public class ApplicationController implements Initializable {
     }
 
     private int getIntFromNumOfPulls(){
-        int numOfPulls = 0;
+        int numOfPulls = 10;
 
         try {
             numOfPulls = Integer.parseInt(NumberOfPulls.getText());
@@ -98,6 +98,8 @@ public class ApplicationController implements Initializable {
 
             alert.setTitle("Error");
             alert.setContentText("Invalid Input\n You probably didn't use numbers. Try again.");
+
+            alert.show();
 
         }
 
