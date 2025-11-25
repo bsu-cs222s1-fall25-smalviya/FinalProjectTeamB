@@ -6,83 +6,121 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
-   <children>
-      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Restart" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <VBox layoutY="25.0" prefHeight="119.0" prefWidth="277.0" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
-         <children>
-            <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="35.0" prefWidth="71.0" text="Gacha Game" textAlignment="CENTER" />
-                     </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <ChoiceBox fx:id="GachaGameChoice" prefWidth="150.0" />
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-            <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
-               <items>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="35.0" prefWidth="71.0" text="Rarity" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <ChoiceBox fx:id="RarityChoice" prefWidth="150.0" />
-                     </children>
-                  </AnchorPane>
-               </items>
-            </SplitPane>
-            <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="47.0" prefHeight="37.0" prefWidth="208.0">
-               <items>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="35.0" prefWidth="71.0" text="No. of pulls" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <TextField fx:id="pullsTextField" />
-                     </children>
-                  </AnchorPane>
-               </items>
-            </SplitPane>
-         </children>
-      </VBox>
-      <HBox layoutX="416.0" layoutY="367.0" prefHeight="27.0" prefWidth="184.0">
-         <children>
-            <Button mnemonicParsing="false" text="How it's done" />
-            <Button mnemonicParsing="false" text="Again" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#exitProgram" text="Exit" textAlignment="RIGHT">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-      <VBox layoutX="281.0" layoutY="25.0" prefHeight="315.0" prefWidth="308.0">
-         <children>
-            <Label prefHeight="27.0" prefWidth="277.0" text="Stats" textAlignment="CENTER">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextArea prefHeight="289.0" prefWidth="313.0" />
-         </children>
-      </VBox>
-   </children>
+    <children>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Restart" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox layoutY="25.0" prefHeight="163.0" prefWidth="277.0" AnchorPane.bottomAnchor="212.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="71.0" text="Gacha Game" textAlignment="CENTER" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <ChoiceBox fx:id="GachaGameChoice" prefWidth="150.0" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+                <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="71.0" text="Garenteed?" textAlignment="CENTER" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <ChoiceBox fx:id="GenshinGarentee" prefWidth="150.0" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="71.0" text="Banner" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <ChoiceBox fx:id="BannerChoice" prefWidth="150.0" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="71.0" text="Rarity" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <ChoiceBox fx:id="RarityChoice" prefWidth="150.0" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="47.0" prefHeight="37.0" prefWidth="208.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="71.0" text="No. of pulls" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <TextField fx:id="NumberOfPulls" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+        </VBox>
+        <HBox layoutX="416.0" layoutY="367.0" prefHeight="27.0" AnchorPane.leftAnchor="365.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#RunButton" text="Run">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin></Button>
+                <Button mnemonicParsing="false" text="How it's done">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#restartApplication" text="Again" textAlignment="CENTER">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#exitProgram" text="Exit" textAlignment="RIGHT">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <VBox layoutX="281.0" layoutY="25.0" prefHeight="315.0" prefWidth="308.0">
+            <children>
+                <Label prefHeight="27.0" prefWidth="277.0" text="Stats" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="ResultsArea" prefHeight="289.0" prefWidth="313.0" />
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

@@ -37,7 +37,7 @@ dependencies {
     implementation("com.jayway.jsonpath:json-path:2.9.0")
     implementation("net.minidev:json-smart:2.6.0")
 
-   val javafxVersion = "23.0.1"
+    val javafxVersion = "23.0.1"
 
     implementation("org.openjfx:javafx-base:$javafxVersion")
     implementation("org.openjfx:javafx-controls:$javafxVersion")
@@ -54,7 +54,6 @@ javafx {
 
 application {
     mainClass.set("edu.bsu.cs222.MainApplication")
-    //mainClass.set("edu.bsu.cs222.GraphSimulationTEST")
 }
 tasks.test {
     useJUnitPlatform()

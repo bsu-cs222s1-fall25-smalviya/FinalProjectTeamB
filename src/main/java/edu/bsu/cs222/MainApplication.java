@@ -7,7 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainApplication extends Application {
-
+    Output output = new Output();
+    RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
+    CalculateProbabilities calculate = new CalculateProbabilities();
+    GachaPullSim pullSim = new GachaPullSim();
     public static void main(String[] args) {
         launch(args);
     }
@@ -20,11 +23,10 @@ public class MainApplication extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
-        }
-
-
-
-
-
     }
 
+
+
+
+
+}

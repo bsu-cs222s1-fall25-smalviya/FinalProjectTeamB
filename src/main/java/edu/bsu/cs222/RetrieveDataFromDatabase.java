@@ -40,38 +40,47 @@ public class RetrieveDataFromDatabase {
                 bannerStats[i] = new BannerStats(stringRarity, doubleRarityProbability, doubleRarityPityProbability, pityCount);
             }
 
-                    switch (rarity) {
-                        case 0:
-                            result = bannerStats[0];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[0]));
-                        case 1:
-                            result = bannerStats[1];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[1]));
-                        case 2:
-                            result = bannerStats[2];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[2]));
-                        case 3:
-                            result = bannerStats[3];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[3]));
-                        case 4:
-                            result = bannerStats[4];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[4]));
-                        case 5:
-                            result = bannerStats[5];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[5]));
-                        case 6:
-                            result = bannerStats[6];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[6]));
-                        case 7:
-                            result = bannerStats[7];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[7]));
-                        case 8:
-                            result = bannerStats[8];
-                            System.out.println(JSONArray.toJSONString((List<? extends Object>) bannerStats[8]));
+            switch (rarity) {
+                case 0:
+                    result = bannerStats[0];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats [0])));
+                    break;
+                case 1:
+                    result = bannerStats[1];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[1])));
+                    break;
+                case 2:
+                    result = bannerStats[2];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[2])));
+                    break;
+                case 3:
+                    result = bannerStats[3];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[3])));
+                    break;
+                case 4:
+                    result = bannerStats[4];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[4])));
+                    break;
+                case 5:
+                    result = bannerStats[5];
+                    //System.out.println(JSONArray.toJSONString(List.of(bannerStats[5])));
+                    break;
+                case 6:
+                    result = bannerStats[6];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[6])));
+                    break;
+                case 7:
+                    result = bannerStats[7];
+                    // System.out.println(JSONArray.toJSONString(List.of(bannerStats[7])));
+                    break;
+                case 8:
+                    result = bannerStats[8];
+                    //System.out.println(JSONArray.toJSONString(List.of(bannerStats[8])));
+                    break;
 
-                        default:
-                            throw new IllegalStateException("Unexpected value: " + rarity);
-    }
+                default:
+                    throw new IllegalStateException("Unexpected value: " + rarity);
+            }
 
 
         } catch (Exception e) {
