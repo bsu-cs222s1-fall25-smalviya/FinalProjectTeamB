@@ -54,6 +54,7 @@ javafx {
 
 application {
     mainClass.set("edu.bsu.cs222.MainApplication")
+    //mainClass.set("edu.bsu.cs222.GraphSimulationTEST")
 }
 tasks.test {
     useJUnitPlatform()
