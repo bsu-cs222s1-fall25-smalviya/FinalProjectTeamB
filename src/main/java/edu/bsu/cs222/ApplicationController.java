@@ -3,6 +3,7 @@ package edu.bsu.cs222;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -16,6 +17,8 @@ public class ApplicationController implements Initializable {
     @FXML
     private ChoiceBox<String> GachaGameChoice;
     private String[] gameOptions = {"Pokemon TCGP","Infinity Nikki","Genshin Impact"};
+
+    Alert alert = new Alert(Alert.AlertType.ERROR);
 
     @FXML
     private ChoiceBox <String> GenshinGarentee;
@@ -87,9 +90,19 @@ public class ApplicationController implements Initializable {
     }
 
     private int getIntFromNumOfPulls(){
-        int NumOfPulls = Integer.parseInt(NumberOfPulls.getText());
-        NumberOfPulls.setText(Integer.toString(NumOfPulls));
-        return NumOfPulls;
+        int numOfPulls = 0;
+
+        try {
+            numOfPulls = Integer.parseInt(NumberOfPulls.getText());
+        } catch (Exception e) {
+
+            alert.setTitle("Error");
+            alert.setContentText("Invalid Input\n You probably didn't use numbers. Try again.");
+
+        }
+
+        NumberOfPulls.setText(Integer.toString(numOfPulls));
+        return numOfPulls;
     }
 
 
@@ -163,6 +176,7 @@ public class ApplicationController implements Initializable {
     public void RunButton( ActionEvent actionEvent) {
         ResultsArea.setText(getInfo());
     }
+
     public String getInfo(){
         if (GachaGameChoice.getValue() == null){
             return "Error: No Game selected.";
@@ -226,7 +240,6 @@ public class ApplicationController implements Initializable {
 
         return finalResults;
     }
-
 
 
     public void restartApplication(ActionEvent actionEvent) {

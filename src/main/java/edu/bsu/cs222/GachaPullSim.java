@@ -9,7 +9,6 @@ public class GachaPullSim {
     private List<Integer> pullsList = new ArrayList<>();
     private double average;
     private int simPulls = 10000;
-    private GachaSimGraphData[] gachaSimGraphData = new GachaSimGraphData[10000];
 
     public List<Integer> userPullsSim(double rarityProbability, double rarityPityProbability, int rarityPityCount){
 
@@ -35,7 +34,7 @@ public class GachaPullSim {
             }
 
             pullsList.add(pulls);
-            gachaSimGraphData[i] = new GachaSimGraphData(pullProbability, pulls);
+
 
         }
 
@@ -61,7 +60,6 @@ public class GachaPullSim {
         return average/simPulls;
     }
 
-    public GachaSimGraphData[] getGachaSimGraphData() {
-        return gachaSimGraphData;
-    }
+
+
 }
