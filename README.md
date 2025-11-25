@@ -15,3 +15,11 @@ Calculates probability based on user input and information on their desired game
 Outputs the probability of getting the item the user desires
 
 Outputs the maximum amount of real money spent on getting the item
+
+## Run Instructions
+
+To run without the GUI, run the Main class
+
+To run with GUI, use Gradle - Application - Run
+
+Enter the game title, banner, rarity, and number of pulls to calculate the probability of getting the item you want
