@@ -21,8 +21,8 @@ public class ApplicationController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.ERROR);
 
     @FXML
-    private ChoiceBox <String> GenshinGarentee;
-    private String[] garenteeAnswer = {"Yes", "No"};
+    private ChoiceBox <String> GenshinGuarentee;
+    private String[] guaranteedAnswer = {"Yes", "No"};
 
     @FXML
     private ChoiceBox <String> BannerChoice;
@@ -115,7 +115,7 @@ public class ApplicationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         GachaGameChoice.getItems().addAll(gameOptions);
-        GenshinGarentee.getItems().addAll(garenteeAnswer);
+        GenshinGuarentee.getItems().addAll(guaranteedAnswer);
         GachaGameChoice.setOnAction(this::getBannerForGame);
         BannerChoice.setOnAction(this::getRarityForBanner);
 
@@ -214,7 +214,7 @@ public class ApplicationController implements Initializable {
         if (gameTitle.equals("Genshin Impact")){
 
 
-            if (GenshinGarentee.getValue() == "Yes"){
+            if (GenshinGuarentee.getValue() == "Yes"){
                 finalProbability = calculate.genshinProbability(singlePull, rarityPityProbability, numOfPulls);
             }
             else {
