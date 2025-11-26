@@ -3,10 +3,7 @@ package edu.bsu.cs222;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.List;
@@ -250,4 +247,12 @@ public class ApplicationController implements Initializable {
         RarityChoice.getItems().clear();
 
     }
+
+
+
+
+
+
+
+
 }

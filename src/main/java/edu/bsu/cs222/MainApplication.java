@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MainApplication extends Application {
     Output output = new Output();
     RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
@@ -23,6 +25,16 @@ public class MainApplication extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
+    }
+
+    public Stage howItsDonePopup() throws IOException {
+        Stage popup = new Stage();
+
+        Parent popupRoot = FXMLLoader.load(getClass().getResource("HowItsCalculatedPopupUI.fxml"));
+
+        popup.setScene(new Scene(popupRoot));
+
+        return popup;
     }
 
 

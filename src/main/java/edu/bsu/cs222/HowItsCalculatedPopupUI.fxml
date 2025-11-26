@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
+   <children>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Stats">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="370.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="117.0" minHeight="8.285045623779297E-6" prefHeight="54.333337148030594" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="515.6666628519694" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Pokemon TCGP" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Infinity Nikki" textAlignment="CENTER" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Genshin Impact" textAlignment="CENTER" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Stats change based on the card's placement in a booster pack. The first three cards you pull will always be common.&#10;                &#10;                Card 4:&#10;                    Uncommon: 89%&#10;                    Rare: 4.952%&#10;                    Double Rare/Ultra Rare: 1.666%&#10;                    Illustration Rare: 2.572%&#10;                    Special ILlustration Rare: 0.5%&#10;                    Immersive Cards: 0.222%&#10;                    Shiny Rare: 0.714%&#10;                    Double Shiny Rare: 0.333%&#10;                    Crown Rare: 0.04%&#10;                Card 5:&#10;                    Uncommon: 56%&#10;                    Rare: 19.81%&#10;                    Double Rare/Ultra Rare: 6.664%&#10;                    Illustration Rare: 10.288%&#10;                    Special ILlustration Rare: 2%&#10;                    Immersive Cards: 0.888%&#10;                    Shiny Rare: 2.857%&#10;                    Double Shiny Rare: 1.333%&#10;                    Crown Rare: 0.16%" wrapText="true" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="12.5" />
+                                 </font></TextArea>
+                              <TextArea layoutX="10.0" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Surprise-O-Matic:&#10;&#9;3⭐ Piese: 97.6%&#10;&#9;4⭐ Piece: 1.6%&#10;&#9;5⭐ Piece: 0.8%&#10;&#10;5⭐ Resonance:&#10;*Every 10 pulls guarantees at least one 4⭐ or higher&#10;&#9;3⭐ Piece: 82.44%&#10;&#9;4⭐ Piece: 3.29%&#10;&#9;&#9;•11.50% with pity&#10;&#9;5⭐ Piece: 1.5%&#10;&#9;&#9;•6.06% with pity&#10;&#10;4⭐ Resonance:&#10;*Every 5 pulls guarantees at least one 4⭐&#10;&#9;3⭐ Piece: 75.2%&#10;&#9;4⭐ Piece: 10%&#10;&#9;&#9;•24.8% with pity" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="12.5" />
+                                 </font></TextArea>
+                              <TextArea layoutX="210.0" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Limited Character Banner&#10;*Guaranteed to win 4⭐ or above item at least once per 10 attempts&#10;&#9;4⭐ Item: 5.1%&#10;&#9;&#9;•99.4% with pity&#10;&#9;5⭐ Item: 0.06%&#10;&#9;&#9;•0.6% with pity&#10;&#9;4⭐ Character: 2.55%&#10;&#9;5⭐: 0.06%&#10;&#9;&#9;•+6% each pull after 89 pulls" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="12.5" />
+                                 </font></TextArea>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Math">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Simulation">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
