@@ -45,7 +45,11 @@ public class ApplicationController implements Initializable {
 
     public void getBannerForGame(ActionEvent event){
         String myGameChoice = GachaGameChoice.getValue();
-        String[] bannerOptions = {""};
+        if(myGameChoice == null){
+            BannerChoice.getItems().clear();
+            return;
+        }
+        String[] bannerOptions;
         switch (myGameChoice) {
             case "Pokemon TCGP":
                 bannerOptions = new String[]{"Single Booster Pack"};
@@ -57,14 +61,19 @@ public class ApplicationController implements Initializable {
                 bannerOptions = new String[]{"Limited Character"};
                 break;
             default:
-                bannerOptions = null;
+                bannerOptions = new String[0];
         }
+        BannerChoice.getItems().clear();
         BannerChoice.getItems().addAll(bannerOptions);
     }
 
     public void getRarityForBanner(ActionEvent event){
         String myBannerChoice = BannerChoice.getValue();
-        String[] rarityOptions = {};
+        if (myBannerChoice == null || myBannerChoice.isEmpty()){
+            RarityChoice.getItems().clear();
+            return;
+        }
+        String[] rarityOptions;
         switch (myBannerChoice) {
             case "Single Booster Pack":
                 rarityOptions =new String[]{"Uncommon", "Rare", "Ultra Rare", "Illustration Rare", "Special Illustration Rare", "Immersive", "Shiny Rare", "Double Shiny Rare", "Crown Rare"};
@@ -81,8 +90,9 @@ public class ApplicationController implements Initializable {
             case "Limited Character":
                 rarityOptions = new String[]{"4 Star Character", "4 Star Weapon", "5 Stars"};
                 break;
-            default: rarityOptions = null;
+            default: rarityOptions = new String[0];
         }
+        RarityChoice.getItems().clear();
         RarityChoice.getItems().addAll(rarityOptions);
     }
 
@@ -242,9 +252,17 @@ public class ApplicationController implements Initializable {
 
 
     public void restartApplication(ActionEvent actionEvent) {
-
+        GachaGameChoice.getItems().clear();
+        GachaGameChoice.getItems().addAll(gameOptions);
+        GenshinGuarentee.getItems().clear();
+        GenshinGuarentee.getItems().addAll(guaranteedAnswer);
         BannerChoice.getItems().clear();
+        BannerChoice.getItems().addAll(bannerOptions);
+        RarityChoice.getSelectionModel().clearSelection();
         RarityChoice.getItems().clear();
+        NumberOfPulls.clear();
+        ResultsArea.setText("");
+
 
     }
 
