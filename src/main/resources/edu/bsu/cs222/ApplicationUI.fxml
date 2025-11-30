@@ -97,7 +97,7 @@
                     <HBox.margin>
                         <Insets right="5.0" />
                     </HBox.margin></Button>
-                <Button fx:id="howPopup" mnemonicParsing="false" text="How it's done">
+                <Button  fx:id="howPopup" mnemonicParsing="false" onAction="#HowItsDone" text="How it's done">
                     <HBox.margin>
                         <Insets right="5.0" />
                     </HBox.margin></Button>

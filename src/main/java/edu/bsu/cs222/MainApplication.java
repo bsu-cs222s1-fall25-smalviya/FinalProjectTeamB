@@ -27,15 +27,7 @@ public class MainApplication extends Application {
 
     }
 
-    public Stage howItsDonePopup() throws IOException {
-        Stage popup = new Stage();
 
-        Parent popupRoot = FXMLLoader.load(getClass().getResource("HowItsCalculatedPopupUI.fxml"));
-
-        popup.setScene(new Scene(popupRoot));
-
-        return popup;
-    }
 
 
 
