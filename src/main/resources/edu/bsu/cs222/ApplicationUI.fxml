@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
     <children>
         <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <menus>
@@ -17,7 +17,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox layoutY="25.0" prefHeight="163.0" prefWidth="277.0" AnchorPane.bottomAnchor="212.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <VBox layoutX="14.0" layoutY="53.0" prefHeight="199.0" prefWidth="286.0" AnchorPane.bottomAnchor="548.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="53.0">
             <children>
                 <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
                     <items>
@@ -91,13 +91,13 @@
                 </SplitPane>
             </children>
         </VBox>
-        <HBox layoutX="416.0" layoutY="367.0" prefHeight="27.0" AnchorPane.leftAnchor="365.0">
+        <HBox layoutX="33.0" layoutY="258.0" prefHeight="27.0" AnchorPane.leftAnchor="33.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#RunButton" text="Run">
                     <HBox.margin>
                         <Insets right="5.0" />
                     </HBox.margin></Button>
-                <Button  fx:id="howPopup" mnemonicParsing="false" onAction="#HowItsDone" text="How it's done">
+                <Button fx:id="howPopup" mnemonicParsing="false" onAction="#HowItsDone" text="How it's done">
                     <HBox.margin>
                         <Insets right="5.0" />
                     </HBox.margin></Button>
@@ -119,8 +119,52 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <TextArea fx:id="ResultsArea" prefHeight="289.0" prefWidth="313.0" />
+                <TextArea fx:id="ResultsArea" prefHeight="289.0" prefWidth="286.0" />
             </children>
         </VBox>
+      <VBox layoutX="6.0" layoutY="367.0" prefHeight="365.0" prefWidth="277.0">
+         <children>
+            <SplitPane dividerPositions="0.3799171842650104" prefHeight="39.0" prefWidth="278.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="71.0">
+                     <children>
+                        <Label layoutX="2.0" layoutY="-3.0" prefHeight="39.0" prefWidth="100.0" text="Gacha Game" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="121.0">
+                     <children>
+                        <ChoiceBox fx:id="GameMoneyPick" layoutY="1.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="65.0" prefWidth="271.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutY="-3.0" prefHeight="35.0" prefWidth="277.0" text="How do you want to Calculate" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ChoiceBox fx:id="CalculationStyle" layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="270.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="60.0" prefWidth="278.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label fx:id="MethoodLabel" layoutX="2.0" layoutY="-3.0" prefHeight="29.0" prefWidth="270.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextField layoutX="63.0" layoutY="1.0" prefHeight="25.0" prefWidth="275.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>

@@ -50,6 +50,16 @@ public class ApplicationController implements Initializable {
     @FXML
     private Button howPopup;
 
+    @FXML
+    private ChoiceBox GameMoneyPick;
+
+    @FXML
+    private ChoiceBox CalculationStyle;
+    private String [] calcStyle = {"Calculate the const of pulls", "Calculate amount of pulls within a Budget"};
+
+    @FXML
+    private Label MethoodLabel;
+
 
 
     public void getBannerForGame(ActionEvent event){
@@ -136,6 +146,9 @@ public class ApplicationController implements Initializable {
         GenshinGuarentee.getItems().addAll(guaranteedAnswer);
         GachaGameChoice.setOnAction(this::getBannerForGame);
         BannerChoice.setOnAction(this::getRarityForBanner);
+        GameMoneyPick.getItems().addAll(gameOptions);
+        CalculationStyle.getItems().addAll(calcStyle);
+
 
 
 
@@ -292,6 +305,8 @@ public void HowItsDone(ActionEvent event) throws IOException {
     closeCalcStage(event);
 
 }
+
+//public void
 
 
 
