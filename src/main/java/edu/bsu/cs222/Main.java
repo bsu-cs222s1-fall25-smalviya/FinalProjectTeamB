@@ -11,6 +11,8 @@ public class Main {
         CalculateProbabilities calculate = new CalculateProbabilities();
         GachaPullSim pullSim = new GachaPullSim();
         How how = new How();
+        Money money = new Money();
+        MoneyInput moneyInput = new MoneyInput();
 
         int game = input.getUserInput();
         String gameTitle = null;
@@ -65,7 +67,24 @@ public class Main {
             finalProbability = calculate.infinityNikiProbability(singlePull, rarityPityProbability, rarityPityCount, numOfPulls);
         }
 
-
+        if (moneyInput.UsingMoney()){
+            String moneyGame = moneyInput.chooseGame();
+            if (moneyGame == null){
+                System.out.println("Invalid game selection...");
+            }
+            else {
+                boolean calculateCost = moneyInput.chooseMoneyMethod();
+                if (calculateCost){
+                    int paidPulls = moneyInput.pullsInput();
+                    double cost = money.calculateMoney(moneyGame, paidPulls);
+                    System.out.printf("The cost of %d pulls in %s: $%.2f%n", paidPulls, moneyGame, cost);
+                }else {
+                    double budget = moneyInput.budgetInput();
+                    int pulls = money.calculateBudget(moneyGame, budget);
+                    System.out.printf("For a budget of $%.2f, you can get %d pulls in %s.%n", budget, pulls, moneyGame);
+                }
+            }
+        }
 
 
 
