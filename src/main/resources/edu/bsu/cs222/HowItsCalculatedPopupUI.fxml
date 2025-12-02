@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -58,16 +60,128 @@
           </Tab>
           <Tab text="Math">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../complementaryprobability.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab text="Simulation">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="407.0" layoutY="89.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="571.0" prefWidth="253.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" text="Monte Carlo Simulation" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Text lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Monte Carlo Simulation is a type of computational algorithm that uses repeated random sampling to obtain the likelihood of a range of results of occurring.&quot;" wrappingWidth="300.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- IBM" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="80.0" top="1.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <ImageView fitHeight="149.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../monte_carlo_price_1-636x310-2.jpeg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label prefWidth="298.0" text="Image Source: Data Science Team at datascience.eu">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="It's main use is assessing risk. It's used in various scenarios such as AI, stock prices, sales forcating, project management, pricing, and much more." wrappingWidth="300.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="540.0" fitWidth="369.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../GachaSimChart.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Flow chart showing how the simulation in this program works. It's repeated 10,000 times." wrapText="true">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
               </content>
             </Tab>
             <Tab text="Money">
-
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="458.33333428700763" minHeight="10.0" prefHeight="232.66666666666663" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="280.00000000000006" minHeight="10.0" prefHeight="274.00000000000006" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Pokemon TCGP" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="33.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Infinity Nikki" textAlignment="CENTER" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Genshin Impact" textAlignment="CENTER" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="33.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+                </content>
             </Tab>
         </tabs>
       </TabPane>
