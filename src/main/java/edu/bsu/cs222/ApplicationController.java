@@ -246,9 +246,9 @@ public class ApplicationController implements Initializable {
 
         BannerStats bannerStats = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
 
-        double singlePull = bannerStats.rarityProbability();
-        double rarityPityProbability = bannerStats.rarityPityProbability();
-        int rarityPityCount = bannerStats.pityCount();
+        double singlePull = bannerStats.getRarityProbability();
+        double rarityPityProbability = bannerStats.getRarityPityProbability();
+        int rarityPityCount = bannerStats.getPityCount();
 
         List<Integer> pullsList = pullSim.userPullsSim(singlePull, rarityPityProbability, rarityPityCount);
 
@@ -278,7 +278,7 @@ public class ApplicationController implements Initializable {
                 "\n" +
                 "Game: " + gameTitle +
                 "\n" +"Banner/Pack: " + bannerName +
-                "\n" +"Rarity: " + bannerStats.rarity() +
+                "\n" +"Rarity: " + bannerStats.getRarity() +
                 "\n" + "Final Probability: " + formatted +
                 "\n" + "Average Number of Pulls Based on 10,000 Simulated Successes: ~" + averagePulls + "\n" +
                 "Probability based on 10,000 Simulated Successes: ~" + pullSimProbability + "\n");
@@ -311,7 +311,7 @@ public class ApplicationController implements Initializable {
     public void showHIDScene()throws IOException {
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/HowItsCalculatedPopupUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/edu.bsu.cs222/HowItsCalculatedPopupUI.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
