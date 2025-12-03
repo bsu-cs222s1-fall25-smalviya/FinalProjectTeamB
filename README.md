@@ -1,14 +1,14 @@
-#Gacha Game Stats Calculator
+# Gacha Game Stats Calculator
 
-##Team Members:
+## Team Members:
 
 Ashelyn Reilly, Cassandra Lewis, and Tatum Hadley
 
-##Project Summary:
+## Project Summary:
 
 This is a program that will display the probability of getting an item in a gacha game based on the game, rarity, & other factors if needed. The statistics will also display how much real-world money it would cost to get the item if required.
 
-##Key Features:
+## Key Features:
 
 Calculates probability based on user input and information on their desired game
 
