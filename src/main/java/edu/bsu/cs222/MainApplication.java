@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class MainApplication extends Application {
     Output output = new Output();
     RetrieveDataFromDatabase retrieve = new RetrieveDataFromDatabase();
