@@ -10,9 +10,9 @@ public double finalProbability;
 
     public double infinityNikiProbability(double probability, double pity, double pityCount, int numOfPulls) {
     if(numOfPulls<= pityCount){
-        finalProbability = Math.pow(1 - (1 - pity), numOfPulls);
+        finalProbability = Math.pow( (1 - pity), numOfPulls);
     } else{
-        finalProbability= Math.pow(1 - (1 - probability), numOfPulls);
+        finalProbability= Math.pow( (1 - probability), numOfPulls);
     }
 
         return finalProbability*100;

@@ -7,8 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +29,7 @@ private Button GoBack;
     public void showCalcScene()throws IOException {
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/ApplicationUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ApplicationUI.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
