@@ -42,9 +42,9 @@ public class Main {
         int numOfPulls = input.getUserNumOfPulls();
 
         BannerStats bannerStats = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
-        double singlePull = bannerStats.rarityProbability();
-        double rarityPityProbability = bannerStats.rarityPityProbability();
-        int rarityPityCount = bannerStats.pityCount();
+        double singlePull = bannerStats.getRarityProbability();
+        double rarityPityProbability = bannerStats.getRarityPityProbability();
+        int rarityPityCount = bannerStats.getPityCount();
 
         double finalProbability = 0.0;
 
@@ -96,7 +96,7 @@ public class Main {
         System.out.println();
         System.out.println("Game: " + gameTitle);
         System.out.println("Banner/Pack: " + bannerName);
-        System.out.println("Rarity: " + bannerStats.rarity());
+        System.out.println("Rarity: " + bannerStats.getRarity());
         System.out.println("Final Probability: " + finalProbability);
         System.out.println("Average Number of Pulls Based on 10,000 Simulated Successes: ~" + averagePulls);
         System.out.println("Probability based on 10,000 Simulated Successes: ~" + pullSimProbability + "\n");
