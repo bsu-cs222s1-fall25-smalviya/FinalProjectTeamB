@@ -104,7 +104,7 @@ public class ApplicationController implements Initializable {
                 rarityOptions = new String[]{"3 Stars", "4 Stars", "5 Stars"};
                 break;
             case "4-Star Resonance":
-                rarityOptions = new String[]{"3 Stars", "4 Stars", "5 Stars"};
+                rarityOptions = new String[]{"3 Stars", "4 Stars"};
                 break;
             case "Limited Character":
                 rarityOptions = new String[]{"4 Star Character", "4 Star Weapon", "5 Stars"};
