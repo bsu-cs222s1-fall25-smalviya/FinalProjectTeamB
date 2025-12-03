@@ -51,7 +51,7 @@ public class ApplicationController implements Initializable {
     private Button howPopup;
 
     @FXML
-    private ChoiceBox GameMoneyPick;
+    private ChoiceBox <String> GameMoneyPick;
 
     @FXML
     private ChoiceBox <String> CalculationStyle;
@@ -59,6 +59,18 @@ public class ApplicationController implements Initializable {
 
     @FXML
     private Label MethodLabel;
+
+    @FXML
+    private TextField PullOrBudgetInt;
+
+    @FXML
+    private Button RunMoneyCalc;
+
+    @FXML
+    private Button RestartMoneyButton;
+
+    @FXML
+    private TextArea MoneyResultsBox;
 
 
 
@@ -303,10 +315,10 @@ public class ApplicationController implements Initializable {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
+
 public void HowItsDone(ActionEvent event) throws IOException {
     showHIDScene();
     closeCalcStage(event);
-
 }
 
 public void getMethod(ActionEvent event) {
@@ -317,13 +329,67 @@ public void getMethod(ActionEvent event) {
     } else {
         finalMethood = "Enter your budget.";
     }
-
-
     MethodLabel.setText(finalMethood);
 }
 
 
+public void runMoneyButton(ActionEvent event){
+MoneyResultsBox.setText(getMoneyInfo());
+}
 
+    private Double getIntFromPullsOrBudget(){
+        Double numOfPulls = 10.0;
+
+        try {
+            numOfPulls = Double.parseDouble(PullOrBudgetInt.getText());
+        } catch (Exception e) {
+
+            alert.setTitle("Error");
+            alert.setContentText("Invalid Input\n You probably didn't use numbers. Try again.");
+
+            alert.show();
+
+        }
+
+        PullOrBudgetInt.setText(Double.toString(numOfPulls));
+        return numOfPulls;
+    }
+
+public String getMoneyInfo(){
+        String result = "";
+    Money money = new Money();
+        if(GameMoneyPick.getValue() == null){
+            return "Error: No Game selected.";
+        }
+        if (CalculationStyle.getValue() == null){
+            return "Error: No option selected.";
+        }
+        if (PullOrBudgetInt.getText()==null){
+            return "Error: No Value entered";
+        }else {
+
+            if (CalculationStyle.getValue() == "Calculate the cost of pulls") {
+                double cost = money.calculateMoney(GameMoneyPick.getValue(), getIntFromPullsOrBudget().intValue());
+                  result = ("The cost of "+ String.format("%d", getIntFromPullsOrBudget().intValue()) +" pulls in " + String.format("%s: ", GameMoneyPick.getValue())+ String.format("$%.2f%n", cost));
+            }else{
+                double pulls = money.calculateBudget(GameMoneyPick.getValue(), getIntFromPullsOrBudget());
+                result = ("For a budget of " + String.format("$%.2f",getIntFromPullsOrBudget())+" you can get "+ String.format("%.0f",pulls )+"  pulls in "+ String.format("%s.%n", GameMoneyPick.getValue()));
+            }
+        }
+        return result;
+}
+
+    public void restartMoney(ActionEvent actionEvent){
+    GameMoneyPick.getItems().clear();
+    GameMoneyPick.getItems().addAll(gameOptions);
+
+    CalculationStyle.getItems().clear();
+    CalculationStyle.setValue("");
+    CalculationStyle.getItems().addAll(calcStyle);
+    MethodLabel.setText("");
+    PullOrBudgetInt.clear();
+    MoneyResultsBox.clear();
+}
 
 
 

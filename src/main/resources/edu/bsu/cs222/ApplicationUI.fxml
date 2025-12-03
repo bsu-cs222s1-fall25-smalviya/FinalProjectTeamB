@@ -119,10 +119,10 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <TextArea fx:id="ResultsArea" prefHeight="289.0" prefWidth="286.0" />
+                <TextArea fx:id="ResultsArea" prefHeight="282.0" prefWidth="308.0" />
             </children>
         </VBox>
-      <VBox layoutX="14.0" layoutY="367.0" prefHeight="365.0" prefWidth="268.0">
+      <VBox layoutX="14.0" layoutY="367.0" prefHeight="189.0" prefWidth="268.0">
          <children>
             <SplitPane dividerPositions="0.3799171842650104" prefHeight="39.0" prefWidth="278.0">
               <items>
@@ -159,7 +159,7 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <TextField layoutY="1.0" prefHeight="25.0" prefWidth="338.0" />
+                        <TextField fx:id="PullOrBudgetInt" layoutY="1.0" prefHeight="25.0" prefWidth="338.0" />
                      </children>
                   </AnchorPane>
               </items>
@@ -176,5 +176,27 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <VBox layoutX="282.0" layoutY="340.0" prefHeight="315.0" prefWidth="308.0">
+         <children>
+            <Label prefHeight="29.0" prefWidth="308.0" text="Results">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="MoneyResultsBox" prefHeight="287.0" prefWidth="308.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="11.0" layoutY="556.0" prefHeight="64.0" prefWidth="268.0">
+         <children>
+            <Button fx:id="RunMoneyCalc" onAction="#runMoneyButton" mnemonicParsing="false" text="Run">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin></Button>
+            <Button fx:id="RestartMoneyButton" onAction="#restartMoney" mnemonicParsing="false" text="Again">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
     </children>
 </AnchorPane>
