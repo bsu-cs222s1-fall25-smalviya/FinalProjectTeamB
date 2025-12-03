@@ -311,7 +311,7 @@ public class ApplicationController implements Initializable {
     public void showHIDScene()throws IOException {
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/edu.bsu.cs222/HowItsCalculatedPopupUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("HowItsCalculatedPopupUI.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
