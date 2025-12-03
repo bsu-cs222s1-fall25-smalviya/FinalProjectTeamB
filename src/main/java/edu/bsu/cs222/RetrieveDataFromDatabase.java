@@ -12,7 +12,7 @@ public class RetrieveDataFromDatabase {
     public BannerStats gachaGameProbability(String gameName, String bannerName, int rarity) {
         BannerStats result = null;
 
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("DatabaseCopy.json");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Database.json");
         if (inputStream == null) {
             System.err.println("Could not find Database.json!");
             return null;

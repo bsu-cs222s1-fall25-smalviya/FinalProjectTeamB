@@ -19,21 +19,21 @@ public class ApplicationController implements Initializable {
 
     @FXML
     private ChoiceBox<String> GachaGameChoice;
-    private String[] gameOptions = {"Pokemon TCGP","Infinity Nikki","Genshin Impact"};
+    private final String[] gameOptions = {"Pokemon TCGP","Infinity Nikki","Genshin Impact"};
 
     Alert alert = new Alert(Alert.AlertType.ERROR);
 
     @FXML
     private ChoiceBox <String> GenshinGuarentee;
-    private String[] guaranteedAnswer = {"Yes", "No"};
+    private final String[] guaranteedAnswer = {"Yes", "No"};
 
     @FXML
     private ChoiceBox <String> BannerChoice;
-    private String[] bannerOptions = {""};
+    private final String[] bannerOptions = {""};
 
     @FXML
     private ChoiceBox RarityChoice;
-    private String[] rarityOptions = {""};
+    private final String[] rarityOptions = {""};
 
     @FXML
     private TextField NumberOfPulls;
@@ -41,7 +41,7 @@ public class ApplicationController implements Initializable {
 
     @FXML
     String getGachaGameChoice(ActionEvent event) {
-        return (String) GachaGameChoice.getValue();
+        return GachaGameChoice.getValue();
     }
 
     @FXML
@@ -55,7 +55,7 @@ public class ApplicationController implements Initializable {
 
     @FXML
     private ChoiceBox <String> CalculationStyle;
-    private String [] calcStyle = {"Calculate the cost of pulls", "Calculate amount of pulls attainable within a Budget"};
+    private final String [] calcStyle = {"Calculate the cost of pulls", "Calculate amount of pulls attainable within a Budget"};
 
     @FXML
     private Label MethodLabel;
@@ -246,9 +246,9 @@ public class ApplicationController implements Initializable {
 
         BannerStats bannerStats = retrieve.gachaGameProbability(gameTitle, bannerName, rarity);
 
-        double singlePull = bannerStats.getRarityProbability();
-        double rarityPityProbability = bannerStats.getRarityPityProbability();
-        int rarityPityCount = bannerStats.getPityCount();
+        double singlePull = bannerStats.rarityProbability();
+        double rarityPityProbability = bannerStats.rarityPityProbability();
+        int rarityPityCount = bannerStats.pityCount();
 
         List<Integer> pullsList = pullSim.userPullsSim(singlePull, rarityPityProbability, rarityPityCount);
 
@@ -278,7 +278,7 @@ public class ApplicationController implements Initializable {
                 "\n" +
                 "Game: " + gameTitle +
                 "\n" +"Banner/Pack: " + bannerName +
-                "\n" +"Rarity: " + bannerStats.getRarity() +
+                "\n" +"Rarity: " + bannerStats.rarity() +
                 "\n" + "Final Probability: " + formatted +
                 "\n" + "Average Number of Pulls Based on 10,000 Simulated Successes: ~" + averagePulls + "\n" +
                 "Probability based on 10,000 Simulated Successes: ~" + pullSimProbability + "\n");
@@ -311,7 +311,7 @@ public class ApplicationController implements Initializable {
     public void showHIDScene()throws IOException {
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/edu/bsu/cs222/HowItsCalculatedPopupUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/HowItsCalculatedPopupUI.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

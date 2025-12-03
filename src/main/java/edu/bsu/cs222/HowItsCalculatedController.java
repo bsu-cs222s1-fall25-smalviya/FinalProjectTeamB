@@ -29,7 +29,7 @@ private Button GoBack;
     public void showCalcScene()throws IOException {
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/edu/bsu/cs222/ApplicationUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/ApplicationUI.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
