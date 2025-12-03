@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class GachaPullSim {
-    private Random r = new Random();
-    private List<Integer> pullsList = new ArrayList<>();
+    private final Random r = new Random();
+    private final List<Integer> pullsList = new ArrayList<>();
     private double average;
-    private int simPulls = 10000;
+    private final int simPulls = 10000;
 
     public List<Integer> userPullsSim(double rarityProbability, double rarityPityProbability, int rarityPityCount){
 
@@ -18,7 +18,7 @@ public class GachaPullSim {
             int pityCount = 0;
             double pullProbability = rarityProbability;
 
-            while (targetFound == false){
+            while (!targetFound){
                 if (pityCount >= rarityPityCount && rarityPityCount != 0) {
                     pullProbability = rarityPityProbability;
                 }

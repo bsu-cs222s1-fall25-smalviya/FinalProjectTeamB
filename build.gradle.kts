@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.internal.sharedruntime.codegen.generateKotlinDslApiExtensionsSourceTo
-
 plugins {
     id("java")
     `java-library`
