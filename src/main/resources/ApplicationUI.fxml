@@ -3,199 +3,282 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.ApplicationController">
     <children>
-        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <menus>
-                <Menu mnemonicParsing="false" text="File">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Close" />
-                        <MenuItem mnemonicParsing="false" text="Restart" />
-                    </items>
-                </Menu>
-            </menus>
-        </MenuBar>
-        <VBox layoutX="14.0" layoutY="53.0" prefHeight="199.0" prefWidth="286.0" AnchorPane.bottomAnchor="548.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="53.0">
-            <children>
-                <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
-                    <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <Label prefHeight="35.0" prefWidth="71.0" text="Gacha Game" textAlignment="CENTER" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <ChoiceBox fx:id="GachaGameChoice" prefWidth="150.0" />
-                            </children>
-                        </AnchorPane>
-                    </items>
-                </SplitPane>
-                <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
-                    <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <Label prefHeight="35.0" prefWidth="71.0" text="Garenteed?" textAlignment="CENTER" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <ChoiceBox fx:id="GenshinGuarentee" prefWidth="150.0" />
-                            </children>
-                        </AnchorPane>
-                    </items>
-                </SplitPane>
-                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
-                    <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <Label prefHeight="35.0" prefWidth="71.0" text="Banner" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <ChoiceBox fx:id="BannerChoice" prefWidth="150.0" />
-                            </children>
-                        </AnchorPane>
-                    </items>
-                </SplitPane>
-                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
-                    <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <Label prefHeight="35.0" prefWidth="71.0" text="Rarity" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <ChoiceBox fx:id="RarityChoice" prefWidth="150.0" />
-                            </children>
-                        </AnchorPane>
-                    </items>
-                </SplitPane>
-                <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="47.0" prefHeight="37.0" prefWidth="208.0">
-                    <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <Label prefHeight="35.0" prefWidth="71.0" text="No. of pulls" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                            <children>
-                                <TextField fx:id="NumberOfPulls" />
-                            </children>
-                        </AnchorPane>
-                    </items>
-                </SplitPane>
-            </children>
-        </VBox>
-        <HBox layoutX="33.0" layoutY="258.0" prefHeight="27.0" AnchorPane.leftAnchor="33.0">
-            <children>
-                <Button mnemonicParsing="false" onAction="#RunButton" text="Run">
-                    <HBox.margin>
-                        <Insets right="5.0" />
-                    </HBox.margin></Button>
-                <Button fx:id="howPopup" mnemonicParsing="false" onAction="#HowItsDone" text="How it's done">
-                    <HBox.margin>
-                        <Insets right="5.0" />
-                    </HBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#restartApplication" text="Again" textAlignment="CENTER">
-                    <HBox.margin>
-                        <Insets right="5.0" />
-                    </HBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#exitProgram" text="Exit" textAlignment="RIGHT">
-                    <HBox.margin>
-                        <Insets />
-                    </HBox.margin>
-                </Button>
-            </children>
-        </HBox>
-        <VBox layoutX="281.0" layoutY="25.0" prefHeight="315.0" prefWidth="308.0">
-            <children>
-                <Label prefHeight="27.0" prefWidth="277.0" text="Stats" textAlignment="CENTER">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <TextArea fx:id="ResultsArea" prefHeight="282.0" prefWidth="308.0" />
-            </children>
-        </VBox>
-      <VBox layoutX="14.0" layoutY="367.0" prefHeight="189.0" prefWidth="268.0">
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitPane dividerPositions="0.3799171842650104" prefHeight="39.0" prefWidth="278.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="71.0">
+              <MenuBar>
+                  <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Close" />
+                              <MenuItem mnemonicParsing="false" text="Restart" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="780.0">
+               <children>
+                    <VBox prefHeight="287.0" prefWidth="308.0">
+                        <children>
+                        <Label prefHeight="29.0" prefWidth="238.0" text="Rarity Calculation" textAlignment="CENTER">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                            <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
+                                <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="71.0" text="Gacha Game:" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <ChoiceBox fx:id="GachaGameChoice" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="149.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                            <SplitPane dividerPositions="0.362012987012987" prefHeight="37.0" prefWidth="208.0">
+                                <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="71.0" text="Guarenteed:" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <ChoiceBox fx:id="GenshinGuarentee" prefWidth="150.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                            <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
+                                <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="71.0" text="Banner:" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <ChoiceBox fx:id="BannerChoice" prefWidth="150.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                            <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="208.0">
+                                <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="71.0" text="Rarity:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <ChoiceBox fx:id="RarityChoice" prefWidth="150.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                            <SplitPane dividerPositions="0.362012987012987" layoutX="10.0" layoutY="47.0" prefHeight="37.0" prefWidth="208.0">
+                                <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="71.0" text="No. of pulls:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <children>
+                                            <TextField fx:id="NumberOfPulls" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="116.0">
+                           <children>
+                                  <Button mnemonicParsing="false" onAction="#RunButton" text="Run">
+                                      <HBox.margin>
+                                          <Insets right="5.0" />
+                                      </HBox.margin>
+                              </Button>
+                                  <Button mnemonicParsing="false" onAction="#restartApplication" text="Again" textAlignment="CENTER">
+                                      <HBox.margin>
+                                          <Insets right="5.0" />
+                                      </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                    </VBox>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="284.0" prefWidth="449.0">
                      <children>
-                        <Label layoutX="2.0" layoutY="-3.0" prefHeight="39.0" prefWidth="100.0" text="Gacha Game" />
-                     </children></AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="121.0">
-                     <children>
-                        <ChoiceBox fx:id="GameMoneyPick" layoutY="1.0" prefWidth="150.0" />
+                            <Label prefHeight="27.0" prefWidth="277.0" text="Stats" textAlignment="CENTER">
+                                <font>
+                                    <Font size="23.0" />
+                                </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                            </Label>
+                            <TextArea fx:id="ResultsArea" prefHeight="287.0" prefWidth="308.0">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></TextArea>
                      </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="65.0" prefWidth="271.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="255.0" prefWidth="780.0">
+               <children>
+                  <VBox prefHeight="287.0" prefWidth="308.0">
                      <children>
-                        <Label layoutY="-3.0" prefHeight="35.0" prefWidth="277.0" text="How do you want to Calculate" />
+                        <Label prefHeight="25.0" prefWidth="315.0" text="Monetary conversion">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <SplitPane dividerPositions="0.3799171842650104" prefHeight="39.0" prefWidth="278.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="71.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="-3.0" prefHeight="39.0" prefWidth="100.0" text="Gacha Game:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="121.0">
+                                 <children>
+                                    <ChoiceBox fx:id="GameMoneyPick" layoutY="1.0" prefWidth="150.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="65.0" prefWidth="271.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutY="-3.0" prefHeight="35.0" prefWidth="277.0" text="How do you want to Calculate:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ChoiceBox fx:id="CalculationStyle" layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="270.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="60.0" prefWidth="278.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label fx:id="MethodLabel" layoutX="2.0" layoutY="-3.0" prefHeight="29.0" prefWidth="270.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField fx:id="PullOrBudgetInt" layoutY="1.0" prefHeight="25.0" prefWidth="338.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="116.0">
+                           <children>
+                              <Button fx:id="RunMoneyCalc" mnemonicParsing="false" onAction="#runMoneyButton" text="Run">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="RestartMoneyButton" mnemonicParsing="false" onAction="#restartMoney" text="Again">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
                      </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <ChoiceBox fx:id="CalculationStyle" layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="270.0" />
-                     </children></AnchorPane>
-              </items>
-            </SplitPane>
-            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="60.0" prefWidth="278.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <Label fx:id="MethodLabel" layoutX="2.0" layoutY="-3.0" prefHeight="29.0" prefWidth="270.0" />
-                     </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <TextField fx:id="PullOrBudgetInt" layoutY="1.0" prefHeight="25.0" prefWidth="338.0" />
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="746.0" prefWidth="446.0">
+                        <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="373.0" prefWidth="338.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="308.0" text="Results">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextArea fx:id="MoneyResultsBox" prefHeight="287.0" prefWidth="308.0">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        </children>
+                    </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+              <HBox alignment="BOTTOM_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="700.0">
+                  <children>
+                      <Button fx:id="howPopup" mnemonicParsing="false" onAction="#HowItsDone" text="How it's done">
+                          <HBox.margin>
+                              <Insets right="5.0" />
+                          </HBox.margin>
+                  </Button>
+                      <Button mnemonicParsing="false" onAction="#exitProgram" text="Exit" textAlignment="RIGHT">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                      </Button>
+                  </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </VBox.margin>
+              </HBox>
          </children>
       </VBox>
-      <Label layoutX="14.0" layoutY="25.0" prefHeight="29.0" prefWidth="238.0" text="Rarity Calculation" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="340.0" prefHeight="25.0" prefWidth="315.0" text="Monetary conversion">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <VBox layoutX="282.0" layoutY="340.0" prefHeight="315.0" prefWidth="308.0">
-         <children>
-            <Label prefHeight="29.0" prefWidth="308.0" text="Results">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextArea fx:id="MoneyResultsBox" prefHeight="287.0" prefWidth="308.0" />
-         </children>
-      </VBox>
-      <HBox layoutX="11.0" layoutY="556.0" prefHeight="64.0" prefWidth="268.0">
-         <children>
-            <Button fx:id="RunMoneyCalc" onAction="#runMoneyButton" mnemonicParsing="false" text="Run">
-               <HBox.margin>
-                  <Insets left="2.0" />
-               </HBox.margin></Button>
-            <Button fx:id="RestartMoneyButton" onAction="#restartMoney" mnemonicParsing="false" text="Again">
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin></Button>
-         </children>
-      </HBox>
     </children>
 </AnchorPane>
