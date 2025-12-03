@@ -122,7 +122,7 @@
                 <TextArea fx:id="ResultsArea" prefHeight="289.0" prefWidth="286.0" />
             </children>
         </VBox>
-      <VBox layoutX="6.0" layoutY="367.0" prefHeight="365.0" prefWidth="277.0">
+      <VBox layoutX="14.0" layoutY="367.0" prefHeight="365.0" prefWidth="268.0">
          <children>
             <SplitPane dividerPositions="0.3799171842650104" prefHeight="39.0" prefWidth="278.0">
               <items>
@@ -154,17 +154,27 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="MethoodLabel" layoutX="2.0" layoutY="-3.0" prefHeight="29.0" prefWidth="270.0" />
+                        <Label fx:id="MethodLabel" layoutX="2.0" layoutY="-3.0" prefHeight="29.0" prefWidth="270.0" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <TextField layoutX="63.0" layoutY="1.0" prefHeight="25.0" prefWidth="275.0" />
+                        <TextField layoutY="1.0" prefHeight="25.0" prefWidth="338.0" />
                      </children>
                   </AnchorPane>
               </items>
             </SplitPane>
          </children>
       </VBox>
+      <Label layoutX="14.0" layoutY="25.0" prefHeight="29.0" prefWidth="238.0" text="Rarity Calculation" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="340.0" prefHeight="25.0" prefWidth="315.0" text="Monetary conversion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

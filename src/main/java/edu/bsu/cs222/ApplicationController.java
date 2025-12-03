@@ -54,11 +54,11 @@ public class ApplicationController implements Initializable {
     private ChoiceBox GameMoneyPick;
 
     @FXML
-    private ChoiceBox CalculationStyle;
-    private String [] calcStyle = {"Calculate the const of pulls", "Calculate amount of pulls within a Budget"};
+    private ChoiceBox <String> CalculationStyle;
+    private String [] calcStyle = {"Calculate the cost of pulls", "Calculate amount of pulls attainable within a Budget"};
 
     @FXML
-    private Label MethoodLabel;
+    private Label MethodLabel;
 
 
 
@@ -148,6 +148,9 @@ public class ApplicationController implements Initializable {
         BannerChoice.setOnAction(this::getRarityForBanner);
         GameMoneyPick.getItems().addAll(gameOptions);
         CalculationStyle.getItems().addAll(calcStyle);
+        CalculationStyle.setOnAction(this::getMethod);
+
+
 
 
 
@@ -306,7 +309,18 @@ public void HowItsDone(ActionEvent event) throws IOException {
 
 }
 
-//public void
+public void getMethod(ActionEvent event) {
+    String moneyMethod = CalculationStyle.getValue();
+    String finalMethood = null;
+    if (moneyMethod.equals("Calculate the cost of pulls")) {
+        finalMethood = "Enter the number of pulls you want calculated.";
+    } else {
+        finalMethood = "Enter your budget.";
+    }
+
+
+    MethodLabel.setText(finalMethood);
+}
 
 
 
