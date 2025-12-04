@@ -1,9 +1,9 @@
 package edu.bsu.cs222;
 
 public class Money {
-    private static final double PokemonPullCost = 1.98;
-    private static final double InfinityPullCost = 1.98;
-    private final double GenshinPullCost = 2.64;
+    private static final double PokemonPullCost = 1.22;
+    private static final double InfinityPullCost = 1.87;
+    private final double GenshinPullCost = 2.53;
 
     public double getCostPull(String gameTitle){
         return switch (gameTitle){
