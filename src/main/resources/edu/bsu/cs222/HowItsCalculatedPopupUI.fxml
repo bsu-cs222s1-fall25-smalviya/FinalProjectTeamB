@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.HowItsCalculatedController">
    <children>
-      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TabPane layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
         <tabs>
           <Tab text="Stats">
             <content>
@@ -253,6 +253,12 @@
                                     <Font size="33.0" />
                                  </font>
                               </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Poké Gold costs…                                                     $0.99 for 5 This means you have a 10 hour reduction$4.99 for 25This means you have a 50 hour reductionAbout 4 packs$9.99 for 50 This means you have a 100 hour reductionAbout 8 packs$19.99 for 100This means you have a 200 hour reduction16 packs$ 39.99 for 200This means you have a 400 hour reductionAbout 33 packs$ 99.99 for 500This means you have a 1,000 hour reduction83 packs" wrappingWidth="270.0" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Genshin Impact Cost…$0.99 for 60 genesis crystals$4.99 for 300 genesis crystalsAbout 1 pull$14.99 for 980 genesis crystalsAbout 6 pulls$29.99 for 1,980 genesis crystalsAbout 12 pulls$49.99 for 3,280 genesis crystalsAbout 20 pulls$99.99 for 6,480 genesis crystalsAbout 40 pulls" wrappingWidth="170.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Infinity Nikki Cost…$0.99 for 60 stellarites$4.99 for 300 stellaritesAbout 2 pulls$14.99 for 980 stellaritesAbout 8 pulls$29.99 for 1980 stellaritesAbout 16 pulls$49.99 for 3280 stellarites About 27 pulls$99.99 for 6480 stellarites 54 pulls" wrappingWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="For the Pokemon packs the average price $1.22 Then the price was used to calculate the cost and budget Cost = paid_pulls*1.22Pulls = budget/1.22" wrappingWidth="100.0" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="For Infinity Nikki the average price was $1.87 to pull onceThen the price was used to calculate the cost and budget Cost = paid_pulls*1.87Pulls = budget/1.87" wrappingWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="For Genshin Impact the average price was $2.53 to pull onceThen the price was used to calculate the cost and budget Cost = paid_pulls*2.53Pulls = budget/2.53" wrappingWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </children></AnchorPane>
