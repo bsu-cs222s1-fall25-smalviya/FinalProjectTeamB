@@ -23,7 +23,7 @@ public class MoneyInput {
     public int getUserGameInput(){
 
         System.out.print("Please enter the Gacha Game (Enter 1 for Pokemon TCGP, 2 for Infinity Nikki, or 3 for Genshin Impact): ");
-        return Integer.parseInt(scanner.next());
+        return Integer.parseInt(scanner.nextLine());
     }
     public String chooseGame(){
         System.out.println("Please select the game you are spending money on...");

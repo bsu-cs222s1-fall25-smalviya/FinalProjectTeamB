@@ -91,7 +91,7 @@ public class Input {
         if (!gameTitle.equals("Genshin Impact")) {
             return false;
         }
-        System.out.print("Are you guaranteed? Please enter yes of no: ");
+        System.out.print("Are you guaranteed?(For Genshin players only) Please enter yes of no: ");
         String answer = scanner.nextLine().trim().toLowerCase();
         return answer.equals("yes");
     }
